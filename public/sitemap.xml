@@ -9,17 +9,24 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Services/Diensten -->
+  <!-- Services -->
   <url>
-    <loc>https://sde-agency.com/diensten</loc>
+    <loc>https://sde-agency.com/websitedevelopment</loc>
     <lastmod>2024-12-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   
-  <!-- About/Over Ons -->
   <url>
-    <loc>https://sde-agency.com/over-ons</loc>
+    <loc>https://sde-agency.com/social-media-ads</loc>
+    <lastmod>2024-12-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- About -->
+  <url>
+    <loc>https://sde-agency.com/Over-ons</loc>
     <lastmod>2024-12-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -33,20 +40,26 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Portfolio/Projecten -->
+  <!-- Legal Pages -->
   <url>
-    <loc>https://sde-agency.com/projecten</loc>
+    <loc>https://sde-agency.com/privacybeleid</loc>
     <lastmod>2024-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   
-  <!-- Blog (if you have one) -->
   <url>
-    <loc>https://sde-agency.com/blog</loc>
+    <loc>https://sde-agency.com/algemene-voorwaarden</loc>
     <lastmod>2024-12-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://sde-agency.com/cookiebeleid</loc>
+    <lastmod>2024-12-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
