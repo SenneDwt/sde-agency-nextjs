@@ -196,11 +196,11 @@ export default function WhyChooseUs() {
             Klaar om je bedrijf te laten groeien?
           </h3>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto text-lg">
-            Laten we kennismaken. 
-            In een vrijblijvend gesprek bespreken we je doelen en hoe we je kunnen helpen.
+            Laten we kennismaken. <br />Plan een vrijblijvend gesprek. 
+          
           </p>
           <Link href="/contact" className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition-colors hover:shadow-lg hover:shadow-orange-500/50">
-            Plan een kosteloos gesprek
+            Plan een gesprek
           </Link>
         </div>
       </div>

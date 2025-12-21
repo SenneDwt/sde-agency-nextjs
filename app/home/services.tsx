@@ -48,17 +48,21 @@ export default function Services() {
               ))}
             </div>
           </div>
-          <button onClick={() => setServicesSlide(Math.max(0, servicesSlide - 1))} disabled={servicesSlide === 0} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center disabled:opacity-50">
-            <ChevronLeft className="w-6 h-6" />
+          <button
+              onClick={() => setServicesSlide(Math.max(0, servicesSlide - 1))}
+              disabled={servicesSlide === 0}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center disabled:opacity-50 text-slate-600 hover:bg-slate-50 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
           </button>
-          <button onClick={() => setServicesSlide(Math.min(services.length - 1, servicesSlide + 1))} disabled={servicesSlide === services.length - 1} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center disabled:opacity-50">
-            <ChevronRight className="w-6 h-6" />
+
+          <button
+              onClick={() => setServicesSlide(Math.min(services.length - 1, servicesSlide + 1))}
+              disabled={servicesSlide === services.length - 1}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center disabled:opacity-50 text-slate-600 hover:bg-slate-50 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
           </button>
-          <div className="flex justify-center gap-2 mt-6">
-            {services.map((_, i) => (
-              <button key={i} onClick={() => setServicesSlide(i)} className={`w-2 h-2 rounded-full transition-all ${servicesSlide === i ? 'bg-orange-500 w-6' : 'bg-slate-300'}`} />
-            ))}
-          </div>
         </div>
 
         {/* Desktop Grid */}

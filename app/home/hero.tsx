@@ -36,7 +36,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-2">
-            Wij bouwen moderne websites en zorgen voor advertentiecampagnes die jouw omzet laten groeien.
+            Moderne websites en advertentiecampagnes die jouw omzet laten groeien.
           </p>
 
           <a href="/contact" className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 relative">

@@ -19,17 +19,17 @@ export default function SocialMediaAds() {
     {
       icon: Target,
       title: 'Precise Targeting',
-      description: 'Ik bereik exact jouw ideale klant met geavanceerde targeting op basis van interesses, gedrag en demographics op Meta.'
+      description: 'Ik bereik jouw ideale klant met geavanceerde targeting.'
     },
     {
       icon: TrendingUp,
       title: 'Data-Driven Optimalisatie',
-      description: 'Dagelijkse monitoring en optimalisatie van je campagnes. Ik focus op wat werkt en schaal dat op.'
+      description: 'Dagelijkse monitoring en optimalisatie van je campagnes. '
     },
     {
       icon: Users,
       title: 'Schaalbare Campagnes',
-      description: 'Van kleine testbudgetten tot grote campagnes. Zodra het werkt, schalen we op voor maximale groei.'
+      description: 'Van kleine testbudgetten tot grote campagnes.'
     },
     {
       icon: BarChart3,
@@ -70,8 +70,7 @@ export default function SocialMediaAds() {
     'Direct contact met mij als jouw specialist',
     'Transparante rapportages elke week',
     'Focus op échte resultaten voor jouw bedrijf',
-    'Volledige controle over je eigen ad account',
-    'Persoonlijke strategie, geen standaard templates',
+    'Persoonlijke strategie',
     'Continue optimalisatie voor betere prestaties'
   ];
 
@@ -108,8 +107,8 @@ export default function SocialMediaAds() {
 
           {/* Description */}
           <p className="text-base sm:text-lg md:text-xl text-slate-200 mb-8 md:mb-12 max-w-3xl leading-relaxed mx-auto px-2">
-            Ik help bedrijven groeien met meta. <br />
-            Advertenties die converteren.
+            Ik help bedrijven groeien met meta <br />
+            advertenties die converteren
           </p>
 
           {/* CTA Button - Properly Centered */}
@@ -149,10 +148,10 @@ export default function SocialMediaAds() {
               Waarom Meta Ads
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Facebook & Instagram zijn perfect voor <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">jouw groei</span>
+               Meta Ads zijn perfect voor <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">jouw groei</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Met 3+ miljard actieve gebruikers bereik je precies de mensen die interesse hebben in jouw product of dienst
+              Met 3+ miljard actieve gebruikers bereik je precies de juiste mensen.
             </p>
           </div>
 
@@ -163,9 +162,8 @@ export default function SocialMediaAds() {
                 {[
                   'Bereik miljoenen potentiële klanten op Facebook & Instagram',
                   'Targeting op basis van interesses, gedrag en demografische gegevens',
-                  'Visuele advertenties die de aandacht trekken',
                   'Start vanaf elk budget',
-                  'Meet direct je resultaten'
+                  'Meet snel je resultaten'
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0" />
@@ -202,7 +200,7 @@ export default function SocialMediaAds() {
               Mijn Aanpak
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Hoe ik jouw <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">campagnes laat groeien</span>
+              Hoe ik jouw <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">campagnes</span> versterk
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Persoonlijke begeleiding en bewezen strategieën
