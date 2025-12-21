@@ -20,7 +20,7 @@ export default function WebsiteDevelopment() {
   const features = [
     {
       icon: Code2,
-      title: 'React & TypeScript',
+      title: 'Next.js & TypeScript',
       description: 'Moderne technologieën voor snelle, betrouwbare websites.',
       color: 'from-blue-500 to-blue-600'
     },
