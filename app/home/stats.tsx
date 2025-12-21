@@ -8,14 +8,14 @@ export default function Stats() {
       icon: TrendingUp,
       value: "€ 10K+",
       label: "GROEI",
-      description: "Gerealiseerd voor recente partners",
+      description: "Voor recente partners",
       color: "text-orange-500",
     },
     {
       icon: MousePointer2,
       value: "120%",
       label: "CONVERSIE STIJGING",
-      description: "Gerealiseerd voor recente partners",
+      description: "Voor recente partners",
       color: "text-cyan-500",
     },
     {

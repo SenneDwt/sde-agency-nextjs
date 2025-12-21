@@ -126,11 +126,11 @@ export default function WebsiteDevelopment() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full mb-6 md:mb-8 border border-white/20">
             <Code2 className="w-4 h-4 text-orange-400" />
-            <span className="text-xs sm:text-sm text-white/90 font-medium">Website Development</span>
+            <span className="text-xs sm:text-sm text-white/90 font-mediums">Website Development</span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight md:block">
             Moderne websites die <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-cyan-400">aandacht</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-400"> trekken</span>
@@ -271,7 +271,7 @@ export default function WebsiteDevelopment() {
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                <p className="text-slate-600 text-lg leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -284,10 +284,10 @@ export default function WebsiteDevelopment() {
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold">
             Het Proces
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Van concept tot <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">live website</span> 
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto mt-2">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Ons stapsgewijze proces voor een succesvolle samenwerking
           </p>
         </div>
@@ -307,7 +307,7 @@ export default function WebsiteDevelopment() {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                <p className="text-slate-600 text-lg leading-relaxed">{item.description}</p>
               </div>
               {index < process.length - 1 && (
                 <div className="flex justify-center py-2">
@@ -333,7 +333,7 @@ export default function WebsiteDevelopment() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
+                <p className="text-slate-600 text-lg leading-relaxed">{item.description}</p>
               </div>
               {index < process.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-orange-500 to-cyan-500 opacity-30" />
@@ -359,7 +359,7 @@ export default function WebsiteDevelopment() {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-600">{benefit}</span>
+                    <span className="text-slate-600 text-lg leading-relaxed">{benefit}</span>
                   </div>
                 ))}
               </div>

@@ -35,7 +35,7 @@ export default function Services() {
                       <service.icon className="w-7 h-7 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-3">{service.title}</h3>
-                    <p className="text-slate-600 mb-6">{service.description}</p>
+                    <p className="text-slate-600 text-lg mb-6">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((f, j) => (
                         <li key={j} className="flex items-center text-sm text-slate-600">

@@ -108,7 +108,7 @@ export default function WhyChooseUs() {
                 {reason.title}
               </h3>
 
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 text-lg leading-relaxed">
                 {reason.description}
               </p>
             </div>
@@ -189,19 +189,6 @@ export default function WhyChooseUs() {
               />
             ))}
           </div>
-        </div>
-
-        <div className="mt-16 bg-gradient-to-br from-slate-900 to-slate-800 p-12 rounded-2xl text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">
-            Klaar om je bedrijf te laten groeien?
-          </h3>
-          <p className="text-slate-300 mb-8 max-w-2xl mx-auto text-lg">
-            Laten we kennismaken. <br />Plan een vrijblijvend gesprek. 
-          
-          </p>
-          <Link href="/contact" className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition-colors hover:shadow-lg hover:shadow-orange-500/50">
-            Plan een gesprek
-          </Link>
         </div>
       </div>
     </section>

@@ -101,13 +101,13 @@ export default function SocialMediaAds() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight md:block">
             Meta Ads die de <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-cyan-400">juiste klanten</span> aanspreken
           </h1>
 
           {/* Description */}
           <p className="text-base sm:text-lg md:text-xl text-slate-200 mb-8 md:mb-12 max-w-3xl leading-relaxed mx-auto px-2">
-            Ik help bedrijven groeien met meta <br />
+            Ik help bedrijven groeien met meta 
             advertenties die converteren
           </p>
 
@@ -176,14 +176,14 @@ export default function SocialMediaAds() {
             <div className="space-y-6">
               <div className="bg-[#F2F2F2] p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow">
                 <h4 className="text-2xl font-bold text-slate-900 mb-3">Bereik jouw ideale klant</h4>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                   Met Meta Ads bereik je exact de mensen die interesse hebben in jouw product of dienst, op het juiste moment.
                 </p>
               </div>
 
               <div className="bg-[#F2F2F2] p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-shadow">
                 <h4 className="text-2xl font-bold text-slate-900 mb-3">Groei vanaf dag 1</h4>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                   Meta Ads leveren sneller resultaten dan traditionele marketing. Perfect voor bedrijven die snel willen groeien.
                 </p>
               </div>
@@ -224,111 +224,75 @@ export default function SocialMediaAds() {
         </div>
       </section>
 
+      
       {/* Process Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Het Proces
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Van gesprek tot <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">groeiende campagnes</span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Stap voor stap naar succesvolle Meta advertenties
-            </p>
+<section className="py-24 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        Het Proces
+      </div>
+      <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+        Van gesprek tot <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">groeiende campagnes</span>
+      </h2>
+      <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+        Stap voor stap naar succesvolle Meta advertenties
+      </p>
+    </div>
+
+    {/* Mobile Stack */}
+    <div className="md:hidden space-y-4">
+      {process.map((item, index) => (
+        <div key={index} className="relative">
+          <div className="bg-[#F2F2F2] border border-slate-200 rounded-2xl p-6">
+            <div className="text-orange-500 font-bold text-5xl mb-4 opacity-50">{item.step}</div>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+            <p className="text-slate-600 text-lg leading-relaxed">{item.description}</p>
           </div>
-
-          {/* Mobile Slider */}
-          <div className="md:hidden relative">
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-300 ease-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {process.map((item, index) => (
-                  <div
-                    key={index}
-                    className="w-full flex-shrink-0 px-4"
-                  >
-                    <div className="bg-[#F2F2F2] border border-slate-200 rounded-2xl p-6 h-full">
-                      <div className="text-orange-500 font-bold text-5xl mb-4 opacity-50">{item.step}</div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                      <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          {index < process.length - 1 && (
+            <div className="flex justify-center py-2">
+              <div className="w-0.5 h-4 bg-gradient-to-b from-orange-500 to-cyan-500 opacity-30" />
             </div>
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={() => setCurrentSlide(Math.max(0, currentSlide - 1))}
-              disabled={currentSlide === 0}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed z-10"
-            >
-              <ChevronLeft className="w-6 h-6 text-slate-700" />
-            </button>
-            
-            <button
-              onClick={() => setCurrentSlide(Math.min(process.length - 1, currentSlide + 1))}
-              disabled={currentSlide === process.length - 1}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed z-10"
-            >
-              <ChevronRight className="w-6 h-6 text-slate-700" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center gap-2 mt-6">
-              {process.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    currentSlide === index 
-                      ? 'bg-orange-500 w-6' 
-                      : 'bg-slate-300'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {process.map((item, index) => (
-              <div 
-                key={index}
-                className="relative group"
-              >
-                <div className="bg-[#F2F2F2] border border-slate-200 rounded-2xl p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="text-orange-500 font-bold text-5xl mb-4 opacity-50">{item.step}</div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
-                </div>
-                {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-orange-500 to-cyan-500 opacity-30" />
-                )}
-              </div>
-            ))}
-          </div>
+          )}
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Desktop Grid */}
+    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+      {process.map((item, index) => (
+        <div 
+          key={index}
+          className="relative group"
+        >
+          <div className="bg-[#F2F2F2] border border-slate-200 rounded-2xl p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-300 h-full">
+            <div className="text-orange-500 font-bold text-5xl mb-4 opacity-50">{item.step}</div>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+            <p className="text-slate-600 text-lg leading-relaxed">{item.description}</p>
+          </div>
+          {index < process.length - 1 && (
+            <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-orange-500 to-cyan-500 opacity-30" />
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section> 
 
       {/* Why Work With Me Section */}
       <section className="py-24 bg-[#F2F2F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                Waarom samenwerken met mij?
+              <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6">
+                Waarom <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">samenwerken</span> met mij?
               </h2>
               
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-600">{benefit}</span>
+                    <span className="text-slate-600 text-lg leading-relaxed">{benefit}</span>
                   </div>
                 ))}
               </div>

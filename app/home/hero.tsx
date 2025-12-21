@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 w-full text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full mb-6 md:mb-8 border border-white/20">
             <Sparkles className="w-4 h-4 text-orange-400" />
-            <span className="text-xs sm:text-sm text-white/90">Jouw digitale partner</span>
+            <span className="text-xs sm:text-sm text-white/90 font-medium">Jouw digitale partner</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight hidden md:block">
@@ -35,7 +35,7 @@ export default function Hero() {
             <br />Ads die <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-400">presteren</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-2">
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 mb-8 md:mb-12 max-w-3xl leading-relaxed mx-auto px-2">
             Moderne websites en advertentiecampagnes die jouw omzet laten groeien.
           </p>
 

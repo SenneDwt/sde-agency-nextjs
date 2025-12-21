@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { logos } from '../config/logos';
 
 export default function Footer() {
   return (
@@ -10,8 +12,12 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              
-              <span className="text-2xl font-bold">SDE</span>
+              <Image 
+                src={logos.small} 
+                alt="SDE Agency Logo" 
+                height={32}
+                className="h-8 w-auto"
+              />
             </div>
             <div className="space-y-2 text-sm text-slate-400">
               <p className="font-semibold text-slate-300">BTW: BE1015587426</p>
