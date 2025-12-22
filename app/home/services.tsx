@@ -7,19 +7,19 @@ export default function Services() {
   const [servicesSlide, setServicesSlide] = useState(0);
 
   const services = [
-    { icon: Code2, title: 'Website Development', description: 'Razendsnelle, responsieve websites gebouwd met moderne technologie.', features: ['React & TypeScript', 'SEO geoptimaliseerd', 'Blazing fast'] },
-    { icon: Palette, title: 'Web Design', description: 'Unieke designs die jouw merk versterken en bezoekers omzetten naar klanten.', features: ['Custom design', 'Brand identity', 'Responsive design'] },
-    { icon: Megaphone, title: 'Meta Ads Campagnes', description: 'Creatieve Meta advertentiecampagnes die jouw doelgroep bereiken en converteren.', features: ['Facebook & Instagram Ads', 'doelgroep targeting', 'Creative testing'] },
-    { icon: BarChart3, title: 'Meta Analytics & Tracking', description: 'Volledig inzicht in je Meta campagne performance.', features: ['Conversie tracking', 'Pixel setup', 'Wekelijkse rapportages'] },
-    { icon: Rocket, title: 'Website + Ads Strategy', description: 'Geïntegreerde strategie voor maximale ROI.', features: ['Funnel optimalisatie', 'Audience segmentatie', 'Groei planning'] },
-    { icon: Zap, title: 'Setup & Optimalisatie', description: 'Wij zetten alles op en optimaliseren constant.', features: ['Ongoing optimalisatie', 'Budget management', 'Maandelijk advies'] }
+    { icon: Code2, title: 'Websiteontwikkeling', description: 'Razendsnelle, responsieve websites gebouwd met moderne technologie.', features: ['React & TypeScript', 'SEO geoptimaliseerd', 'Supersnel'] },
+    { icon: Palette, title: 'Webdesign', description: 'Unieke designs die jouw merk versterken en bezoekers omzetten naar klanten.', features: ['Maatwerk design', 'Merkidentiteit', 'Responsief ontwerp'] },
+    { icon: Megaphone, title: 'Meta Ads Campagnes', description: 'Creatieve Meta advertentiecampagnes die jouw doelgroep bereiken en converteren.', features: ['Facebook- en Instagram-advertenties', 'Doelgroep targeting', 'Creatieve tests'] },
+    { icon: BarChart3, title: 'Meta analyse & tracking', description: 'Volledig inzicht in de performance van je Meta-campagnes.', features: ['Conversietracking', 'Pixelimplementatie', 'Wekelijkse rapportages'] },
+    { icon: Rocket, title: 'Website + ads-strategie', description: 'Geïntegreerde strategie voor maximale ROI.', features: ['Funnel optimalisatie', 'Doelgroepsegmentatie', 'Groeiplanning'] },
+    { icon: Zap, title: 'Setup & optimalisatie', description: 'Wij zetten alles op en optimaliseren constant.', features: ['Doorlopende optimalisatie', 'Budgetbeheer', 'Maandelijks advies'] }
   ];
 
   return (
     <section id="diensten" className="py-24 bg-[#F2F2F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">Onze Diensten</div>
+          <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">Wat wij doen</div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Alles wat je nodig hebt om te groeien</h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">Van concept tot conversie. We pakken het volledig voor je aan.</p>
         </div>

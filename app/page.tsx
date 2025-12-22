@@ -6,6 +6,8 @@ import Services from './home/services';
 import WhyChooseUs from './home/why-choose-us';
 import ContactSection from './home/contact-section';
 import Stats from './home/stats';
+import Activiteiten from './home/activiteiten';
+
 
 export default function Home() {
   return (
@@ -13,9 +15,10 @@ export default function Home() {
       <Header />
       {/* Home page sections in order */}
       <Hero />
-      <Services />
+      <Activiteiten />
       <Stats />
       <WhyChooseUs />
+      <Services />
       <ContactSection />
       <Footer />
     </>

@@ -25,7 +25,7 @@ export default function Header() {
 
   const navItems = [
     { path: '/', label: 'Home' },
-    { path: '/websitedevelopment', label: 'Website Development' },
+    { path: '/websitedevelopment', label: 'Websiteontwikkeling' },
     { path: '/social-media-ads', label: 'Meta Ads' }
   ];
 
@@ -50,7 +50,7 @@ export default function Header() {
             >
               <Image 
                 src={logos.default} 
-                alt="SDE Agency Logo" 
+                alt="SDE Agency logo" 
                 height={32}
                 className="h-8 w-auto"
                 priority
@@ -82,7 +82,7 @@ export default function Header() {
             <button 
               onClick={() => setIsOpen(!isOpen)} 
               className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
-              aria-label="Toggle menu"
+              aria-label="Menu openen of sluiten"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

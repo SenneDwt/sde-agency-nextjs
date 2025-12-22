@@ -233,7 +233,7 @@ export default function CookiePolicyPage() {
                       rel="noopener noreferrer"
                       className="text-orange-500 hover:underline"
                     >
-                      Meta Privacy Policy
+                      Privacybeleid van Meta
                     </a>
                   </li>
                 </ul>
@@ -256,7 +256,7 @@ export default function CookiePolicyPage() {
                       rel="noopener noreferrer"
                       className="text-orange-500 hover:underline"
                     >
-                      Google Privacy Policy
+                      Privacybeleid van Google
                     </a>
                   </li>
                 </ul>
@@ -278,7 +278,7 @@ export default function CookiePolicyPage() {
                       rel="noopener noreferrer"
                       className="text-orange-500 hover:underline"
                     >
-                      LinkedIn Privacy Policy
+                      Privacybeleid van LinkedIn
                     </a>
                   </li>
                 </ul>
@@ -326,7 +326,7 @@ export default function CookiePolicyPage() {
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:underline"
                 >
-                  LinkedIn Cookie Policy
+                  Cookiebeleid van LinkedIn
                 </a>
               </li>
               <li>
@@ -336,7 +336,7 @@ export default function CookiePolicyPage() {
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:underline"
                 >
-                  Instagram Privacy Policy
+                  Privacybeleid van Instagram
                 </a>
               </li>
               <li>
@@ -346,7 +346,7 @@ export default function CookiePolicyPage() {
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:underline"
                 >
-                  Twitter Privacy Policy
+                  Privacybeleid van Twitter
                 </a>
               </li>
             </ul>
@@ -370,7 +370,7 @@ export default function CookiePolicyPage() {
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:underline"
                 >
-                  Privacy Policy
+                  Privacybeleid
                 </a>{" "}
                 |{" "}
                 <a
@@ -379,7 +379,7 @@ export default function CookiePolicyPage() {
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:underline"
                 >
-                  Cookie Policy
+                  Cookiebeleid
                 </a>
               </li>
               <li>
@@ -390,7 +390,7 @@ export default function CookiePolicyPage() {
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:underline"
                 >
-                  Privacy Policy
+                  Privacybeleid
                 </a>{" "}
                 |{" "}
                 <a
@@ -399,7 +399,7 @@ export default function CookiePolicyPage() {
                   rel="noopener noreferrer"
                   className="text-orange-500 hover:underline"
                 >
-                  Cookie Policy
+                  Cookiebeleid
                 </a>
               </li>
             </ul>

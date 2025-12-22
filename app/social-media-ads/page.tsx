@@ -18,7 +18,7 @@ export default function SocialMediaAds() {
   const features = [
     {
       icon: Target,
-      title: 'Precise Targeting',
+      title: 'Gerichte targeting',
       description: 'Ik bereik jouw ideale klant met geavanceerde targeting.'
     },
     {
@@ -49,9 +49,9 @@ export default function SocialMediaAds() {
       title: 'Campagne Opzet', 
       description: 'Ik bouw je Meta campagnes op met professionele ad copy, visuals en de juiste targeting.' 
     },
-    { 
+    {
       step: '03', 
-      title: 'Testing & Lancering', 
+      title: 'Testen & lancering', 
       description: 'We starten met testen van verschillende advertenties om te zien wat het beste werkt voor jouw doelgroep.' 
     },
     { 
@@ -97,7 +97,7 @@ export default function SocialMediaAds() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full mb-6 md:mb-8 border border-white/20">
             <Target className="w-4 h-4 text-orange-400" />
-            <span className="text-xs sm:text-sm text-white/90 font-medium">Meta Advertising Specialist</span>
+            <span className="text-xs sm:text-sm text-white/90 font-medium">Meta-advertentiespecialist</span>
           </div>
 
           {/* Heading */}

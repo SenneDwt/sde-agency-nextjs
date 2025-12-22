@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-6">
               <Image 
                 src={logos.small} 
-                alt="SDE Agency Logo" 
+                alt="SDE Agency logo" 
                 height={32}
                 className="h-8 w-auto"
               />
@@ -35,7 +35,7 @@ export default function Footer() {
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  Website Development
+                  Websiteontwikkeling
                 </Link>
               </li>
               <li>
@@ -44,7 +44,7 @@ export default function Footer() {
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  Social Media Ads
+                  Social media ads
                 </Link>
               </li>
             </ul>
@@ -138,13 +138,13 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
               <Link href="/privacybeleid" className="hover:text-orange-500 transition-colors">
-                Privacy Policy
+                Privacybeleid
               </Link>
               <Link href="/algemene-voorwaarden" className="hover:text-orange-500 transition-colors">
                 Algemene Voorwaarden
               </Link>
               <Link href="/cookiebeleid" className="hover:text-orange-500 transition-colors">
-                Cookie Policy
+                Cookiebeleid
               </Link>
             </div>
           </div>

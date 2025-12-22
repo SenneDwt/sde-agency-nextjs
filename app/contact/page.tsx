@@ -205,7 +205,7 @@ export default function Contact() {
                 className="w-full px-4 py-2.5 bg-white/5 border border-white/20 rounded-lg text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
               >
                 <option value="" className="bg-slate-800">Selecteer een dienst</option>
-                <option value="website" className="bg-slate-800">Website Development</option>
+                <option value="website" className="bg-slate-800">Websiteontwikkeling</option>
                 <option value="meta-ads" className="bg-slate-800">Meta Ads Campagnes</option>
                 <option value="both" className="bg-slate-800">Website + Ads</option>
               </select>

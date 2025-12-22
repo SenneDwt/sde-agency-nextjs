@@ -58,7 +58,7 @@ export default function WebsiteDevelopment() {
     },
     {
       icon: Zap,
-      title: 'Blazing Fast',
+      title: 'Supersnel',
       description: 'Geoptimaliseerd voor snelheid.',
       color: 'from-yellow-500 to-orange-500'
     },
@@ -82,7 +82,7 @@ export default function WebsiteDevelopment() {
     },
     {
       icon: Palette,
-      title: 'Custom Design',
+      title: 'Maatwerk design',
       description: 'Uniek design dat perfect aansluit bij jouw merk en doelgroep.',
       color: 'from-cyan-500 to-blue-600'
     }
@@ -92,8 +92,8 @@ export default function WebsiteDevelopment() {
     { step: '01', title: 'Analyse', description: 'We analyseren jouw doelen, doelgroep en concurrentie.', icon: Search },
     { step: '02', title: 'Planning', description: 'We maken een gedetailleerd plan voor jouw website.', icon: Layers },
     { step: '03', title: 'Ontwikkeling', description: 'We bouwen je website met moderne technologieën.', icon: Code2 },
-    { step: '04', title: 'Testing', description: 'Uitgebreide tests op verschillende apparaten en browsers.', icon: CheckCircle2 },
-    { step: '05', title: 'Launch', description: 'We lanceren je website en zorgen dat alles perfect werkt.', icon: Rocket }
+    { step: '04', title: 'Testen', description: 'Uitgebreide tests op verschillende apparaten en browsers.', icon: CheckCircle2 },
+    { step: '05', title: 'Lancering', description: 'We lanceren je website en zorgen dat alles perfect werkt.', icon: Rocket }
   ];
 
   const benefits = [
@@ -126,7 +126,7 @@ export default function WebsiteDevelopment() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full mb-6 md:mb-8 border border-white/20">
             <Code2 className="w-4 h-4 text-orange-400" />
-            <span className="text-xs sm:text-sm text-white/90 font-mediums">Website Development</span>
+            <span className="text-xs sm:text-sm text-white/90 font-mediums">Websiteontwikkeling</span>
           </div>
 
           {/* Heading */}
@@ -374,7 +374,7 @@ export default function WebsiteDevelopment() {
             <div className="relative">
               <div className="bg-gradient-to-br from-orange-500/20 to-cyan-500/20 rounded-3xl p-8 backdrop-blur-sm border-2 border-orange-300">
                 <div className="bg-white rounded-2xl p-8 space-y-6">
-                  <h4 className="text-2xl font-bold text-slate-900 mb-6">Performance Metrics</h4>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-6">Prestatiestatistieken</h4>
                   
                   <div className="space-y-5">
                     <div className="flex items-center justify-between">
@@ -402,7 +402,7 @@ export default function WebsiteDevelopment() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <Smartphone className="w-5 h-5 text-purple-500" />
-                        <span className="text-slate-600 font-medium">Mobile Score</span>
+                        <span className="text-slate-600 font-medium">Mobiele score</span>
                       </div>
                       <span className="text-purple-600 font-bold text-lg">100%</span>
                     </div>
