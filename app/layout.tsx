@@ -52,14 +52,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        {/* Cookiebot Cookie Declaration */}
-        <script
-          id="CookieDeclaration"
-          src="https://consent.cookiebot.com/c4718494-9b1c-4ca2-9c50-a1c2678aa33a/cd.js"
-          type="text/javascript"
-          async
-        />
-        {/* End Cookiebot Cookie Declaration */}
         <ScrollToTop />
         {children}
       </body>
