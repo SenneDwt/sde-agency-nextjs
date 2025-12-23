@@ -26,15 +26,7 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <head>
-        {/* Cookiebot - Must load first to block other scripts until consent */}
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="c4718494-9b1c-4ca2-9c50-a1c2678aa33a"
-          data-blockingmode="auto"
-          type="text/javascript"
-        />
-        {/* End Cookiebot */}
+        
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
