@@ -46,7 +46,7 @@ export default function Hero() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto mt-12 md:mt-20">
             {[
-              { label: 'Respons tijd', value: '<24 uur' },
+              { label: 'Test', value: '<24 uur' },
               { label: 'Persoonlijk contact', value: '1 op 1' },
               { label: 'Inzet voor groei', value: '100%' },
               { label: 'Geen templates', value: 'Maatwerk' }
