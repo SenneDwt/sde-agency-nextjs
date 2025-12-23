@@ -26,9 +26,42 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <head>
+        {/* Cookiebot */}
+        <script 
+          id="Cookiebot" 
+          src="https://consent.cookiebot.com/uc.js" 
+          data-cbid="c4718494-9b1c-4ca2-9c50-a1c2678aa33a" 
+          type="text/javascript"
+          async
+        />
         
-        {/* Google Tag Manager */}
+        {/* Google Consent Mode - Default State */}
         <script
+          data-cookieconsent="ignore"
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('consent', 'default', {
+  'ad_personalization': 'denied',
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'analytics_storage': 'denied',
+  'functionality_storage': 'denied',
+  'personalization_storage': 'denied',
+  'security_storage': 'granted',
+  'wait_for_update': 500,
+});
+gtag("set", "ads_data_redaction", true);
+gtag("set", "url_passthrough", false);
+            `,
+          }}
+        />
+        
+        {/* Google Tag Manager - geblokkeerd tot cookie toestemming */}
+        <script
+          type="text/plain"
+          data-cookieconsent="statistics"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -37,21 +70,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NRJCCGSD');`,
           }}
         />
-        {/* End Google Tag Manager */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Google Tag Manager (noscript) */}
+        {/* Google Tag Manager (noscript) - geblokkeerd tot cookie toestemming */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NRJCCGSD"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
+            data-cookieconsent="statistics"
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
         <ScrollToTop />
         {children}
       </body>
