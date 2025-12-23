@@ -16,7 +16,7 @@ export default function AboutUs() {
     {
       icon: Zap,
       title: 'Moderne Technologie',
-      description: 'Ik werk met de nieuwste tools en frameworks. Razendsnelle websites gebouwd met React, TypeScript en de beste hosting.',
+      description: 'Ik werk met de nieuwste tools en frameworks zodat je een razendsnelle website krijgt. ',
       color: 'from-cyan-500 to-cyan-600'
     },
     {
@@ -78,28 +78,36 @@ export default function AboutUs() {
         <div className="mb-12 sm:mb-16 text-center">
           <div className="inline-flex items-center gap-2 bg-orange-500/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 border border-orange-500/20">
             <Sparkles className="w-4 h-4 text-orange-400" />
-            <span className="text-xs sm:text-sm text-orange-400 font-medium">Over SDE Agency</span>
+            <span className="text-xs sm:text-sm text-orange-400 font-medium">Over SDE AGENCY</span>
           </div>
           
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Websites & Meta Ads die zorgen voor <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-cyan-400">groei</span>
+            Wie ben ik?
           </h1>
           
-          <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed px-2">
-            Hey! Ik ben Senne, eigenaar van SDE. Ik help ambitieuze ondernemers met moderne websites en strategische Meta Ads campagnes die écht conversies opleveren.
-          </p>
         </div>
 
         {/* Wie ben ik - Card */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Wie ben ik?</h2>
-          <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+          
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+            <div className="flex-shrink-0 w-full lg:w-1/3">
+              <img 
+                src="/1754993401113.jpeg" 
+                alt="Senne - Eigenaar van SDE Agency" 
+                className="w-full rounded-2xl shadow-2xl border-2 border-white/10 object-cover"
+              />
+            </div>
+            <div className="flex-1 space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
             <p>
-              Ik ben gepassioneerd over online marketing en webdevelopment.
-            </p>
-            <p>
-              Bij SDE draait alles om één ding: <span className="text-orange-400 font-semibold">resultaat</span>. Ik bouw geen websites om mooi te zijn (hoewel dat zeker meezit), maar om bezoekers om te zetten in klanten. Mijn Meta Ads campagnes zijn niet gemaakt om likes te verzamelen, maar om jouw doelgroep te bereiken en te converteren.
-            </p>
+            Hey daar! <br /><br />Ik ben Senne, eigenaar van SDE. Ik help ambitieuze ondernemers met moderne websites en strategische Meta Ads campagnes die écht conversies opleveren. <br /><br />
+            Ik ben gepassioneerd over online marketing en webdevelopment. Bij SDE draait alles om één ding: <span className="text-orange-400 font-semibold">resultaat</span>. <br /><br />Ik bouw geen websites om mooi te zijn (hoewel dat zeker meezit), maar om bezoekers om te zetten in klanten. Mijn Meta Ads campagnes zijn niet gemaakt om likes te verzamelen, maar om jouw doelgroep te bereiken en te converteren.
+            </p> 
+          
+            
+               
+              
+            </div>
           </div>
         </div>
 

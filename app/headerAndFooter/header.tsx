@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { logos } from '../config/logos';
 
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +27,9 @@ export default function Header() {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/websitedevelopment', label: 'Websiteontwikkeling' },
-    { path: '/social-media-ads', label: 'Meta Ads' }
+    { path: '/social-media-ads', label: 'Meta Ads' },
+    { path: '/Over-ons', label: 'Over ons' }
+
   ];
 
   const isActive = (path: string) => pathname === path;
