@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 w-full text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full mb-6 md:mb-8 border border-white/20">
             <Sparkles className="w-4 h-4 text-orange-400" />
-            <span className="text-xs sm:text-sm text-white/90 font-medium">Jouw digitale partner</span>
+            <span className="text-xs sm:text-sm text-white/90 font-medium">sde-agency</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight hidden md:block">
@@ -46,7 +46,7 @@ export default function Hero() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto mt-12 md:mt-20">
             {[
-              { label: 'Test', value: '<24 uur' },
+              { label: 'Respons tijd', value: '<24 uur' },
               { label: 'Persoonlijk contact', value: '1 op 1' },
               { label: 'Inzet voor groei', value: '100%' },
               { label: 'Geen templates', value: 'Maatwerk' }
