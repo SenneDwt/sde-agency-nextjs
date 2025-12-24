@@ -2,6 +2,8 @@
 
 import { ArrowLeft, Target, Zap, Award, Sparkles, ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Header from '../headerAndFooter/header';
+import Footer from '../headerAndFooter/footer';
 
 export default function AboutUs() {
   const router = useRouter();
@@ -57,6 +59,8 @@ export default function AboutUs() {
   ];
 
   return (
+    <>
+    <Header />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated background */}
       <div className="absolute inset-0 opacity-10">
@@ -175,5 +179,7 @@ export default function AboutUs() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
