@@ -7,34 +7,75 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Redirects for case-insensitive routing
+# Redirects for case-insensitive routing (from old uppercase to new lowercase)
 [[redirects]]
-  from = "/contact"
-  to = "/Contact"
+  from = "/Contact"
+  to = "/contact"
   status = 301
 
+[[redirects]]
+  from = "/WebsiteDevelopment"
+  to = "/website-development"
+  status = 301
+
+[[redirects]]
+  from = "/Social-Media-Ads"
+  to = "/meta-advertenties"
+  status = 301
+
+[[redirects]]
+  from = "/Privacybeleid"
+  to = "/privacybeleid"
+  status = 301
+
+[[redirects]]
+  from = "/Cookiebeleid"
+  to = "/cookiebeleid"
+  status = 301
+
+[[redirects]]
+  from = "/Algemene-Voorwaarden"
+  to = "/algemene-voorwaarden"
+  status = 301
+
+[[redirects]]
+  from = "/Diensten"
+  to = "/diensten"
+  status = 301
+
+[[redirects]]
+  from = "/Over-ons"
+  to = "/over-ons"
+  status = 301
+
+[[redirects]]
+  from = "/Prijzen"
+  to = "/prijzen"
+  status = 301
+
+[[redirects]]
+  from = "/Ai-Automation"
+  to = "/ai-automation"
+  status = 301
+
+# Additional redirects for common variations
 [[redirects]]
   from = "/websitedevelopment"
-  to = "/WebsiteDevelopment"
+  to = "/website-development"
   status = 301
 
 [[redirects]]
-  from = "/social-media-ads"
-  to = "/Social-Media-Ads"
+  from = "/Website-Development"
+  to = "/website-development"
   status = 301
 
 [[redirects]]
-  from = "/privacybeleid"
-  to = "/Privacybeleid"
+  from = "/meta-ads"
+  to = "/meta-advertenties"
   status = 301
 
 [[redirects]]
-  from = "/cookiebeleid"
-  to = "/Cookiebeleid"
-  status = 301
-
-[[redirects]]
-  from = "/algemene-voorwaarden"
-  to = "/Algemene-Voorwaarden"
+  from = "/Meta-Ads"
+  to = "/meta-advertenties"
   status = 301
 
