@@ -124,8 +124,12 @@ export default function ContactSection() {
                     <input 
                       required 
                       type="tel" 
+                      pattern="[0-9\s\-]+"
                       value={formData.phone} 
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/[^0-9\s\-]/g, '');
+                        setFormData({ ...formData, phone: value });
+                      }} 
                       className="flex-1 px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none placeholder:text-slate-400" 
                       placeholder="471 24 19 12" 
                     />

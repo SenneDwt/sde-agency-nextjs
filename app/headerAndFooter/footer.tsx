@@ -31,7 +31,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link 
-                  href="/Diensten" 
+                  href="/diensten" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/WebsiteDevelopment" 
+                  href="/website-development" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -49,7 +49,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/Social-Media-Ads" 
+                  href="/meta-advertenties" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/Ai-Automation" 
+                  href="/ai-automation" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -74,7 +74,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link 
-                  href="/Over-ons" 
+                  href="/over-ons" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -83,7 +83,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/Prijzen" 
+                  href="/prijzen" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -92,7 +92,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/Contact" 
+                  href="/contact" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -148,7 +148,7 @@ export default function Footer() {
               <p className="text-orange-100">Neem vandaag nog contact op voor een vrijblijvend gesprek.</p>
             </div>
             <Link 
-              href="/Contact"
+              href="/contact"
               className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 hover:scale-105 whitespace-nowrap flex items-center gap-2"
             >
               Plan gesprek
@@ -164,13 +164,13 @@ export default function Footer() {
              © {new Date().getFullYear()} SDE Agency. Alle rechten voorbehouden.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
-              <Link href="/Privacybeleid" className="hover:text-orange-500 transition-colors">
+              <Link href="/privacybeleid" className="hover:text-orange-500 transition-colors">
                 Privacybeleid
               </Link>
-              <Link href="/Algemene-Voorwaarden" className="hover:text-orange-500 transition-colors">
+              <Link href="/algemene-voorwaarden" className="hover:text-orange-500 transition-colors">
                 Algemene Voorwaarden
               </Link>
-              <Link href="/Cookiebeleid" className="hover:text-orange-500 transition-colors">
+              <Link href="/cookiebeleid" className="hover:text-orange-500 transition-colors">
                 Cookiebeleid
               </Link>
             </div>

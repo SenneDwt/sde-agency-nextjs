@@ -159,7 +159,7 @@ export default function AIAutomations() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-20">
               <Link 
-                href="/Contact"
+                href="/contact"
                 className="group relative bg-gradient-to-r from-purple-500 to-purple-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold flex items-center justify-center text-center hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto max-w-xs"
               >
                 <span className="relative text-lg z-10">Start je project</span>
@@ -398,7 +398,7 @@ export default function AIAutomations() {
                 Benieuwd welke processen in jouw bedrijf geautomatiseerd kunnen worden? Ik doe een gratis analyse en laat je zien waar AI impact kan maken.
               </p>
               <Link 
-                href="/Contact"
+                href="/contact"
                 className="inline-block bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-purple-500/50 transition-all"
               >
                 Vraag de AI-Scan aan
@@ -423,7 +423,7 @@ export default function AIAutomations() {
             Plan een vrijblijvend gesprek en ontdek hoe AI jouw bedrijf kan transformeren. Inclusief gratis analyse van automatiseringskansen.
           </p>
           <Link 
-            href="/Contact"
+            href="/contact"
             className="group inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white px-12 py-6 rounded-full font-semibold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
           >
             Start je AI-project

@@ -302,7 +302,7 @@ export default function SDEAgencyServices() {
               Plan een vrijblijvend gesprek en ontdek hoe ik jouw bedrijf kan helpen groeien met de juiste digitale oplossingen.
             </p>
             <Link 
-              href="/Contact"
+              href="/contact"
               className="group inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-12 py-6 rounded-full font-semibold text-xl hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105"
             >
               Start je project

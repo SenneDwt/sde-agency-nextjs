@@ -451,7 +451,7 @@ export default function Pricing() {
             Plan een vrijblijvend gesprek en ontdek welk pakket perfect bij jou past
           </p>
           <a 
-            href="/Contact"
+            href="/contact"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Neem contact op

@@ -80,7 +80,7 @@ export default function ServicesSection() {
               </div>
 
               <Link 
-                href="/WebsiteDevelopment"
+                href="/website-development"
                 className="group/btn w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105"
               >
                 <span>Bekijk websiteontwikkeling</span>
@@ -146,7 +146,7 @@ export default function ServicesSection() {
               </div>
 
               <Link 
-                href="/Social-Media-Ads"
+                href="/meta-advertenties"
                 className="group/btn w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105"
               >
                 <span>Bekijk Meta Ads</span>
@@ -212,7 +212,7 @@ export default function ServicesSection() {
               </div>
 
               <Link 
-                href="/Ai-Automation"
+                href="/ai-automation"
                 className="group/btn w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105"
               >
                 <span>Bekijk AI Automation</span>

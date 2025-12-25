@@ -165,7 +165,7 @@ export default function AboutUs() {
             Laten we kennismaken en kijken hoe ik jouw bedrijf kan helpen groeien met een moderne website en strategische Meta Ads.
           </p>
           <a 
-            href="/Contact"
+            href="/contact"
             className="inline-flex items-center gap-2 bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-orange-50 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
           >
             Plan een vrijblijvend gesprek

@@ -27,19 +27,19 @@ export default function Header() {
 
   const services = [
     { 
-      path: '/WebsiteDevelopment', 
+      path: '/website-development', 
       label: 'Website Ontwikkeling',
       icon: Code2,
       description: 'Moderne, snelle websites'
     },
     { 
-      path: '/Social-Media-Ads', 
+      path: '/meta-advertenties', 
       label: 'Meta Ads',
       icon: Target,
       description: 'Facebook / Instagram advertenties'
     },
     { 
-      path: '/Ai-Automation', 
+      path: '/ai-automation', 
       label: 'AI Automation',
       icon: Bot,
       description: 'Slimme automatiseringen'
@@ -48,8 +48,8 @@ export default function Header() {
 
   const navItems = [
     { path: '/', label: 'Home' },
-    { path: '/Prijzen', label: 'Prijzen' },
-    { path: '/Over-ons', label: 'Over ons' }
+    { path: '/prijzen', label: 'Prijzen' },
+    { path: '/over-ons', label: 'Over ons' }
   ];
 
   const isActive = (path: string) => pathname === path;
@@ -143,7 +143,7 @@ export default function Header() {
                   </div>
                   <div className="border-t border-slate-700/50 px-4 py-3 bg-slate-800/50">
                     <Link
-                      href="/Diensten"
+                      href="/diensten"
                       className="text-sm text-orange-400 hover:text-orange-300 font-medium flex items-center gap-1"
                     >
                       Bekijk alle diensten
@@ -154,9 +154,9 @@ export default function Header() {
               </div>
 
               <Link 
-                href="/Prijzen"
+                href="/prijzen"
                 className={`px-3 lg:px-4 py-2 rounded-lg transition-colors text-sm lg:text-base whitespace-nowrap ${
-                  isActive('/Prijzen')
+                  isActive('/prijzen')
                     ? 'text-white font-bold'
                     : 'text-slate-400 hover:text-white font-normal'
                 }`}
@@ -165,9 +165,9 @@ export default function Header() {
               </Link>
 
               <Link 
-                href="/Over-ons"
+                href="/over-ons"
                 className={`px-3 lg:px-4 py-2 rounded-lg transition-colors text-sm lg:text-base whitespace-nowrap ${
-                  isActive('/Over-ons')
+                  isActive('/over-ons')
                     ? 'text-white font-bold'
                     : 'text-slate-400 hover:text-white font-normal'
                 }`}
@@ -176,7 +176,7 @@ export default function Header() {
               </Link>
 
               <Link 
-                href="/Contact"
+                href="/contact"
                 className="ml-2 lg:ml-4 bg-orange-500 text-white px-4 lg:px-6 py-2 rounded-full hover:bg-orange-600 transition-colors font-semibold text-sm lg:text-base whitespace-nowrap"
               >
                 Contact
@@ -260,7 +260,7 @@ export default function Header() {
                   </Link>
                 ))}
                 <Link
-                  href="/Diensten"
+                  href="/diensten"
                   className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-slate-800/50 text-orange-400 hover:text-orange-300 hover:bg-slate-800 transition-all mt-2 border border-slate-700/50"
                 >
                   <span className="text-sm font-medium">Bekijk alle diensten</span>
@@ -271,9 +271,9 @@ export default function Header() {
           </div>
 
           <Link 
-            href="/Prijzen"
+            href="/prijzen"
             className={`w-full text-center px-6 py-4 rounded-xl transition-all text-lg ${
-              isActive('/Prijzen')
+              isActive('/prijzen')
                 ? 'text-white font-bold bg-white/10 scale-105'
                 : 'text-slate-300 hover:text-white hover:bg-white/5 font-normal'
             }`}
@@ -285,9 +285,9 @@ export default function Header() {
           </Link>
 
           <Link 
-            href="/Over-ons"
+            href="/over-ons"
             className={`w-full text-center px-6 py-4 rounded-xl transition-all text-lg ${
-              isActive('/Over-ons')
+              isActive('/over-ons')
                 ? 'text-white font-bold bg-white/10 scale-105'
                 : 'text-slate-300 hover:text-white hover:bg-white/5 font-normal'
             }`}
@@ -299,7 +299,7 @@ export default function Header() {
           </Link>
 
           <Link 
-            href="/Contact"
+            href="/contact"
             className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4 rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all font-semibold text-center text-lg shadow-lg shadow-orange-500/30 mt-4"
             style={{ 
               transitionDelay: isOpen ? '200ms' : '0ms' 

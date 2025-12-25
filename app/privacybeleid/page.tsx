@@ -96,7 +96,7 @@ export default function PrivacyPolicyPage() {
                 <strong>Cookies en vergelijkbare technologieën</strong>: zie
                 ons{" "}
                 <Link
-                  href="/Cookiebeleid"
+                  href="/cookiebeleid"
                   className="text-orange-500 hover:underline"
                 >
                   Cookiebeleid
@@ -444,7 +444,7 @@ export default function PrivacyPolicyPage() {
               Onze website gebruikt cookies en vergelijkbare technologieën. Voor
               gedetailleerde informatie verwijzen wij u naar ons{" "}
               <Link
-                href="/Cookiebeleid"
+                href="/cookiebeleid"
                 className="text-orange-500 hover:underline"
               >
                 Cookiebeleid
