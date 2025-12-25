@@ -248,11 +248,7 @@ export default function Header() {
                   <Link
                     key={service.path}
                     href={service.path}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
-                      pathname === service.path
-                        ? 'bg-orange-500 text-white'
-                        : 'bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white'
-                    }`}
+                    className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white transition-all"
                   >
                     <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <service.icon className="w-5 h-5" />
@@ -263,6 +259,13 @@ export default function Header() {
                     </div>
                   </Link>
                 ))}
+                <Link
+                  href="/Diensten"
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-slate-800/50 text-orange-400 hover:text-orange-300 hover:bg-slate-800 transition-all mt-2 border border-slate-700/50"
+                >
+                  <span className="text-sm font-medium">Bekijk alle diensten</span>
+                  <ChevronDown className="w-4 h-4 -rotate-90" />
+                </Link>
               </div>
             </div>
           </div>

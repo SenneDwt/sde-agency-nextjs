@@ -31,6 +31,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link 
+                  href="/Diensten" 
+                  className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
+                >
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Alle diensten
+                </Link>
+              </li>
+              <li>
+                <Link 
                   href="/WebsiteDevelopment" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >
@@ -47,6 +56,15 @@ export default function Footer() {
                   Social media ads
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/Ai-Automation" 
+                  className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
+                >
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  AI Automations
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -61,6 +79,15 @@ export default function Footer() {
                 >
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   Over ons
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/Prijzen" 
+                  className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
+                >
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Prijzen
                 </Link>
               </li>
               <li>
