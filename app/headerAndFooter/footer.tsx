@@ -31,15 +31,6 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link 
-                  href="/diensten" 
-                  className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
-                >
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  Alle diensten
-                </Link>
-              </li>
-              <li>
-                <Link 
                   href="/website-development" 
                   className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                 >

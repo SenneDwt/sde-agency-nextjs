@@ -141,15 +141,7 @@ export default function Header() {
                       </Link>
                     ))}
                   </div>
-                  <div className="border-t border-slate-700/50 px-4 py-3 bg-slate-800/50">
-                    <Link
-                      href="/diensten"
-                      className="text-sm text-orange-400 hover:text-orange-300 font-medium flex items-center gap-1"
-                    >
-                      Bekijk alle diensten
-                      <ChevronDown className="w-4 h-4 -rotate-90" />
-                    </Link>
-                  </div>
+                  
                 </div>
               </div>
 
@@ -259,13 +251,7 @@ export default function Header() {
                     </div>
                   </Link>
                 ))}
-                <Link
-                  href="/diensten"
-                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-slate-800/50 text-orange-400 hover:text-orange-300 hover:bg-slate-800 transition-all mt-2 border border-slate-700/50"
-                >
-                  <span className="text-sm font-medium">Bekijk alle diensten</span>
-                  <ChevronDown className="w-4 h-4 -rotate-90" />
-                </Link>
+                
               </div>
             </div>
           </div>
