@@ -39,7 +39,7 @@ export default function Hero() {
             Moderne websites en advertentiecampagnes die jouw omzet laten groeien.
           </p>
 
-          <a href="/contact" className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 relative">
+          <a href="/Contact" className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 relative">
             <span className="text-lg">Start je project</span>
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>

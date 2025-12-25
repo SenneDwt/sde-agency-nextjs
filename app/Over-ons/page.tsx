@@ -70,16 +70,11 @@ export default function AboutUs() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Back button */}
-        <button
-          onClick={() => router.back()}
-          className="inline-flex items-center gap-2 text-slate-400 hover:text-orange-400 mb-8 transition-colors group"
-        >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          <span className="text-sm sm:text-base">Terug</span>
-        </button>
+        
+        
 
         {/* Header */}
-        <div className="mb-12 sm:mb-16 text-center">
+        <div className="mb-12 mt-15 sm:mt-30 sm:mb-16 text-center">
           <div className="inline-flex items-center gap-2 bg-orange-500/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 border border-orange-500/20">
             <Sparkles className="w-4 h-4 text-orange-400" />
             <span className="text-xs sm:text-sm text-orange-400 font-medium">Over SDE AGENCY</span>
@@ -170,7 +165,7 @@ export default function AboutUs() {
             Laten we kennismaken en kijken hoe ik jouw bedrijf kan helpen groeien met een moderne website en strategische Meta Ads.
           </p>
           <a 
-            href="/contact"
+            href="/Contact"
             className="inline-flex items-center gap-2 bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-orange-50 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
           >
             Plan een vrijblijvend gesprek

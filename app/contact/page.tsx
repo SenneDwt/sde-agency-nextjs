@@ -189,7 +189,7 @@ export default function Contact() {
                     setFormData({ ...formData, phone: value });
                   }}
                   className="flex-1 px-4 py-2.5 bg-white/5 border border-white/20 rounded-lg text-white placeholder-slate-500 focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
-                  placeholder="471 24 19 12"
+                  placeholder="123 45 67 89"
                 />
               </div>
             </div>
