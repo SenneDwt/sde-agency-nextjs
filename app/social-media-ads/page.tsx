@@ -114,7 +114,7 @@ export default function SocialMediaAds() {
           {/* CTA Button - Properly Centered */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-20">
             <Link 
-              href="/contact"
+              href="/Contact"
               className="group relative bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold flex items-center justify-center text-center hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto max-w-xs"
             >
               <span className="relative text-lg z-10">Start je project</span>
@@ -303,7 +303,7 @@ export default function SocialMediaAds() {
               <p className="text-slate-300 mb-6">
                 Benieuwd wat ik voor jou kan betekenen? Plan een gratis kennismakingsgesprek van 30 minuten.
               </p>
-              <Link href="/contact"
+              <Link href="/Contact"
                 className="inline-block bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors"
               >
                 Plan een gesprek
