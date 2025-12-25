@@ -22,7 +22,7 @@ export default function SDEAgencyServices() {
       description: 'Moderne, snelle websites gebouwd met Next.js en TypeScript. Geoptimaliseerd voor conversie en gebruikerservaring.',
       color: 'from-blue-500 to-cyan-500',
       features: ['Mobile-first design', 'SEO geoptimaliseerd', 'Supersnel', 'Maatwerk design'],
-      link: '/WebsiteDevelopment'
+      link: '/website-development'
     },
     {
       icon: Target,
@@ -30,7 +30,7 @@ export default function SDEAgencyServices() {
       description: 'Data-driven advertentiecampagnes op Facebook en Instagram die de juiste klanten aantrekken en conversies genereren.',
       color: 'from-orange-500 to-pink-500',
       features: ['Gerichte targeting', 'Dagelijkse optimalisatie', 'Transparante rapportage', 'Schaalbare campagnes'],
-      link: '/Social-Media-Ads'
+      link: '/meta-advertenties'
     },
     {
       icon: Bot,
@@ -38,7 +38,7 @@ export default function SDEAgencyServices() {
       description: 'Slimme AI-oplossingen die repetitieve taken automatiseren en je team efficiënter maken.',
       color: 'from-purple-500 to-indigo-500',
       features: ['Procesautomatisering', 'AI chatbots', 'Data-analyse', 'Maatwerk oplossingen'],
-      link: '/Contact'
+      link: '/ai-automation'
     }
   ];
 
