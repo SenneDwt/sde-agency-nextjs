@@ -116,8 +116,8 @@ export default function Header() {
                 <div className={`absolute top-full left-0 mt-2 w-72 bg-slate-900/95 backdrop-blur-lg rounded-xl shadow-2xl border border-slate-700/50 overflow-hidden transition-all duration-200 ${
                   showServicesDropdown ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                 }`}>
-                  <div className="py-2">
-                    {services.map((service) => (
+                  <div className="py-3">
+                    {services.map((service, index) => (
                       <Link
                         key={service.path}
                         href={service.path}
@@ -125,7 +125,7 @@ export default function Header() {
                           pathname === service.path
                             ? 'bg-orange-500/20 text-white'
                             : 'text-slate-300 hover:bg-white/5 hover:text-white'
-                        }`}
+                        } ${index === services.length - 1 ? '' : 'border-b border-slate-700/30'}`}
                       >
                         <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
                           pathname === service.path
@@ -141,7 +141,6 @@ export default function Header() {
                       </Link>
                     ))}
                   </div>
-                  
                 </div>
               </div>
 
@@ -194,21 +193,18 @@ export default function Header() {
         onClick={() => setIsOpen(false)}
       >
         <nav 
-          className={`flex flex-col items-center justify-center h-full space-y-2 px-8 transition-transform duration-300 overflow-y-auto py-24 ${
+          className={`flex flex-col h-full pt-24 pb-8 px-6 transition-transform duration-300 overflow-y-auto ${
             isOpen ? 'translate-y-0' : '-translate-y-4'
           }`}
           onClick={(e) => e.stopPropagation()}
         >
           <Link 
             href="/"
-            className={`w-full text-center px-6 py-4 rounded-xl transition-all text-lg ${
+            className={`w-full text-center px-4 py-3 rounded-lg transition-all ${
               isActive('/')
-                ? 'text-white font-bold bg-white/10 scale-105'
+                ? 'text-white font-bold bg-white/10'
                 : 'text-slate-300 hover:text-white hover:bg-white/5 font-normal'
             }`}
-            style={{ 
-              transitionDelay: isOpen ? '0ms' : '0ms' 
-            }}
           >
             Home
           </Link>
@@ -217,33 +213,41 @@ export default function Header() {
           <div className="w-full">
             <button
               onClick={() => setShowMobileServices(!showMobileServices)}
-              className={`w-full text-center px-6 py-4 rounded-xl transition-all text-lg flex items-center justify-center gap-2 ${
+              className={`w-full text-center px-4 py-3 rounded-lg transition-all flex items-center justify-center gap-2 ${
                 isServiceActive
                   ? 'text-white font-bold bg-white/10'
                   : 'text-slate-300 hover:text-white hover:bg-white/5 font-normal'
               }`}
-              style={{ 
-                transitionDelay: isOpen ? '50ms' : '0ms' 
-              }}
             >
               Diensten
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                 showMobileServices ? 'rotate-180' : ''
               }`} />
             </button>
             
             <div className={`overflow-hidden transition-all duration-300 ${
-              showMobileServices ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
+              showMobileServices ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'
             }`}>
-              <div className="space-y-2 px-4">
+              <div className="space-y-1.5 bg-slate-800/30 rounded-lg p-3 border border-slate-700/30">
+                <div className="px-2 pb-1">
+                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Onze Diensten</p>
+                </div>
                 {services.map((service, index) => (
                   <Link
                     key={service.path}
                     href={service.path}
-                    className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white transition-all"
+                    className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
+                      pathname === service.path
+                        ? 'bg-orange-500/20 text-white'
+                        : 'bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white'
+                    }`}
                   >
-                    <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <service.icon className="w-5 h-5" />
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                      pathname === service.path
+                        ? 'bg-orange-500'
+                        : 'bg-slate-700'
+                    }`}>
+                      <service.icon className="w-4 h-4" />
                     </div>
                     <div className="text-left flex-1">
                       <div className="font-semibold text-sm">{service.label}</div>
@@ -251,45 +255,35 @@ export default function Header() {
                     </div>
                   </Link>
                 ))}
-                
               </div>
             </div>
           </div>
 
           <Link 
             href="/prijzen"
-            className={`w-full text-center px-6 py-4 rounded-xl transition-all text-lg ${
+            className={`w-full text-center px-4 py-3 rounded-lg transition-all ${
               isActive('/prijzen')
-                ? 'text-white font-bold bg-white/10 scale-105'
+                ? 'text-white font-bold bg-white/10'
                 : 'text-slate-300 hover:text-white hover:bg-white/5 font-normal'
             }`}
-            style={{ 
-              transitionDelay: isOpen ? '100ms' : '0ms' 
-            }}
           >
             Prijzen
           </Link>
 
           <Link 
             href="/over-ons"
-            className={`w-full text-center px-6 py-4 rounded-xl transition-all text-lg ${
+            className={`w-full text-center px-4 py-3 rounded-lg transition-all ${
               isActive('/over-ons')
-                ? 'text-white font-bold bg-white/10 scale-105'
+                ? 'text-white font-bold bg-white/10'
                 : 'text-slate-300 hover:text-white hover:bg-white/5 font-normal'
             }`}
-            style={{ 
-              transitionDelay: isOpen ? '150ms' : '0ms' 
-            }}
           >
             Over ons
           </Link>
 
           <Link 
             href="/contact"
-            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4 rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all font-semibold text-center text-lg shadow-lg shadow-orange-500/30 mt-4"
-            style={{ 
-              transitionDelay: isOpen ? '200ms' : '0ms' 
-            }}
+            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all font-semibold text-center shadow-lg shadow-orange-500/30 mt-4"
           >
             Contact
           </Link>
