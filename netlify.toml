@@ -7,3 +7,34 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Redirects for case-insensitive routing
+[[redirects]]
+  from = "/contact"
+  to = "/Contact"
+  status = 301
+
+[[redirects]]
+  from = "/websitedevelopment"
+  to = "/WebsiteDevelopment"
+  status = 301
+
+[[redirects]]
+  from = "/social-media-ads"
+  to = "/Social-Media-Ads"
+  status = 301
+
+[[redirects]]
+  from = "/privacybeleid"
+  to = "/Privacybeleid"
+  status = 301
+
+[[redirects]]
+  from = "/cookiebeleid"
+  to = "/Cookiebeleid"
+  status = 301
+
+[[redirects]]
+  from = "/algemene-voorwaarden"
+  to = "/Algemene-Voorwaarden"
+  status = 301
+

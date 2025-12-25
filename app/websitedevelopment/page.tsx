@@ -144,7 +144,7 @@ export default function WebsiteDevelopment() {
           {/* CTA Button - Properly Centered */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-20">
             <Link 
-              href="/contact"
+              href="/Contact"
               className="group relative bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold flex items-center justify-center text-center hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto max-w-xs"
             >
               <span className="relative text-lg z-10">Start je project</span>
@@ -432,7 +432,7 @@ export default function WebsiteDevelopment() {
            Samen bouwen aan jouw ideale website. <br />Plan geheel vrijblijvend een gesprek.
           </p>
            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-20">
-                          <Link href="/contact"
+                          <Link href="/Contact"
                             className="group inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-xl text-white px-12 py-6 rounded-full font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105"
                           >
                             Start je project
