@@ -158,7 +158,7 @@ export default function Pricing() {
             Prijzen & Pakketten
           </h1>
           <p className="text-slate-400 text-base">
-            Transparante prijzen voor al onze diensten
+            Transparante prijzen voor al mijn diensten
           </p>
         </div>
 

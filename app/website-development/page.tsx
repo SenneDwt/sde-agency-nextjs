@@ -275,7 +275,7 @@ export default function WebsiteDevelopment() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold">
-            Het Proces
+            Het proces
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Van concept tot <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">live website</span> 
@@ -339,8 +339,11 @@ export default function WebsiteDevelopment() {
 
       {/* Interactive Performance Dashboard */}
       <section className="py-24 bg-[#F2F2F2]">
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                 Performance die <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">meetbaar</span> is

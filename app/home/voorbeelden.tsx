@@ -46,14 +46,14 @@ export default function BeforeAfterSlider() {
   };
 
   return (
-    <section className="py-24 bg-[#F2F2F2]">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            Mijn werk
+            Voorbeelden
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">Voorbeelden</span> van mijn werk
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">Demo</span> ontwerpen
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Van concept tot conversie

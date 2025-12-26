@@ -159,7 +159,7 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })} 
                     rows={5} 
                     className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none resize-none placeholder:text-slate-400" 
-                    placeholder="Vertel ons over je project..." 
+                    placeholder="Vertel me over je project..." 
                   />
                 </div>
                 

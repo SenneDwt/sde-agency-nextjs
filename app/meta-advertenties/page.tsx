@@ -145,7 +145,7 @@ export default function SocialMediaAds() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Waarom Meta Ads
+              Waarom meta advertenties?
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
                Meta Ads zijn perfect voor <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">jouw groei</span>
@@ -197,7 +197,7 @@ export default function SocialMediaAds() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Mijn Aanpak
+              Mijn aanpak
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Hoe ik jouw <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">campagnes</span> versterk
@@ -285,7 +285,7 @@ export default function SocialMediaAds() {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
       <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-        Het Proces
+        Het proces
       </div>
       <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
         Van gesprek tot <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">groeiende campagnes</span>

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SDE Agency - Websites die aandacht trekken. Meta Ads die presteren.",
-  description: "Wij bouwen moderne websites en zorgen voor advertentiecampagnes die jouw omzet laten groeien. Websiteontwikkeling, Meta Ads en meer.",
+  description: "Ik bouw moderne websites en zorg voor advertentiecampagnes die jouw omzet laten groeien. Websiteontwikkeling, Meta Ads en meer.",
 };
 
 export default function RootLayout({

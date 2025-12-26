@@ -221,7 +221,7 @@ export default function Contact() {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows={4}
                 className="w-full px-4 py-2.5 bg-white/5 border border-white/20 rounded-lg text-white placeholder-slate-500 focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none resize-none"
-                placeholder="Vertel ons over je project..."
+                placeholder="Vertel me over je project..."
               />
             </div>
 

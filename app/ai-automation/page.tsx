@@ -201,7 +201,7 @@ export default function AIAutomations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Waarom AI Automatisering
+              Waarom AI automatisering
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               AI is geen toekomst meer, <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-600">het is nu</span>
@@ -258,7 +258,7 @@ export default function AIAutomations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-               AI-oplossingen
+               AI oplossingen
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Onze <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-600">AI diensten</span>
@@ -396,7 +396,7 @@ export default function AIAutomations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Het Proces
+              Het proces
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Van idee tot <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-600">werkende AI</span>
