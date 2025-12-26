@@ -26,31 +26,13 @@ export default function AIAutomations() {
     {
       icon: Workflow,
       title: 'Procesautomatisering',
-      description: 'Automatiseer repetitieve taken zoals data-invoer, e-mails en rapportage.',
+      description: 'Repetitieve taken zoals outreach, communicatie en rapportage worden geautomatiseerd.',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Database,
-      title: 'Data-analyse',
-      description: 'AI die jouw data analyseert en waardevolle inzichten genereert voor betere beslissingen.',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      icon: Brain,
-      title: 'Slimme Assistenten',
-      description: 'AI-assistenten die je team ondersteunen bij complexe taken en klantenservice.',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: BarChart3,
-      title: 'Voorspellende Analyse',
-      description: 'Machine learning modellen die trends voorspellen en je helpen strategisch te plannen.',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
       icon: GitBranch,
-      title: 'Integraties',
-      description: 'Naadloze integratie met je bestaande tools en systemen voor maximale efficiëntie.',
+      title: 'Custom',
+      description: 'We kunnnen AI-oplossingen bouwen voor alles, neem contact op om de mogelijkheden te bespreken.',
       color: 'from-cyan-500 to-blue-500'
     }
   ];
@@ -66,7 +48,7 @@ export default function AIAutomations() {
       icon: Clock,
       title: 'Tijdbesparende Workflows',
       description: 'Automatiseer data-invoer, factuurverwerking, e-mail follow-ups en andere repetitieve taken.',
-      results: ['15+ uur per week bespaard', 'Minder fouten', 'Focus op belangrijke werk']
+      results: ['1 werkdag per week bespaard', 'Minder fouten', 'Focus op belangrijke werk']
     },
     {
       icon: Database,
@@ -116,12 +98,11 @@ export default function AIAutomations() {
   ];
 
   const benefits = [
-    'Bespaar 10-20 uur per week op repetitieve taken',
-    'Verhoog de productiviteit van je team met 40%',
+    'Bespaar één werkdag per week op repetitieve taken',
+    'Verhoog de productiviteit van je team',
     'Betere klanttevredenheid door snellere response',
     'Schaalbaar zonder extra personeel',
-    'Data-gedreven beslissingen met AI-inzichten',
-    'ROI zichtbaar binnen 3-6 maanden'
+    'Data-gedreven beslissingen met AI-inzichten'
   ];
 
   return (
@@ -169,10 +150,10 @@ export default function AIAutomations() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
               {[
-                { label: 'Tijdsbesparing', value: '15+ uur' },
+                { label: 'bezig', value: '24/7' },
                 { label: 'Productiviteit', value: '+40%' },
                 { label: 'AI Specialist', value: '100%' },
-                { label: 'ROI periode', value: '3-6 mnd' }
+                { label: 'Geautomatiseerd', value: '100%' }
               ].map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
@@ -204,9 +185,8 @@ export default function AIAutomations() {
               <h3 className="text-3xl font-bold text-white mb-6">Wat kan AI voor jouw bedrijf doen?</h3>
               <div className="space-y-4">
                 {[
-                  'Automatiseer repetitieve taken en bespaar 15+ uur per week',
-                  'Verbeter klantenservice met 24/7 beschikbare AI-assistenten',
-                  'Analyseer data en krijg waardevolle inzichten voor groei',
+                  'Neemt repetitief werk volledig uit handen.',
+                  'Verbeter klantenservice met 24/7 beschikbare AI assistenten',
                   'Schaal je bedrijf zonder proportioneel meer personeel'
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -234,7 +214,7 @@ export default function AIAutomations() {
                 </div>
                 <h4 className="text-2xl font-bold text-slate-900 mb-3">Meetbare Impact</h4>
                 <p className="text-lg text-slate-600">
-                  Concrete resultaten binnen 3-6 maanden: minder kosten, hogere productiviteit en betere klanttevredenheid.
+                  Minder kosten, hogere productiviteit en betere klanttevredenheid.
                 </p>
               </div>
             </div>
@@ -420,7 +400,7 @@ export default function AIAutomations() {
             Klaar voor AI?
           </h2>
           <p className="text-slate-600 text-xl leading-relaxed mb-10">
-            Plan een vrijblijvend gesprek en ontdek hoe AI jouw bedrijf kan transformeren. Inclusief gratis analyse van automatiseringskansen.
+            Plan een vrijblijvend gesprek en ontdek hoe AI jouw bedrijf kan transformeren. <br />Inclusief gratis analyse van automatiseringskansen.
           </p>
           <Link 
             href="/contact"

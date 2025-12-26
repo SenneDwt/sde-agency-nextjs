@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-[#F2F2F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Header */}
         <div className="text-center mb-16">
@@ -65,7 +65,7 @@ export default function ServicesSection() {
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-slate-700">
                       <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
-                      <span className="text-sm">SEO geoptimaliseerd</span>
+                      <span className="text-sm">Makkelijk vindbaar on google</span>
                     </li>
                     <li className="flex items-center gap-2 text-slate-700">
                       <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
@@ -197,15 +197,15 @@ export default function ServicesSection() {
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-slate-700">
                       <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                      <span className="text-sm">+40% productiviteit</span>
+                      <span className="text-sm">24/7 aan het werk </span>
                     </li>
                     <li className="flex items-center gap-2 text-slate-700">
                       <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                      <span className="text-sm">Data-gedreven inzichten</span>
+                      <span className="text-sm">Geautomatiseerde workflows</span>
                     </li>
                     <li className="flex items-center gap-2 text-slate-700">
                       <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                      <span className="text-sm">ROI binnen 3-6 maanden</span>
+                      <span className="text-sm">Aanzienlijke tijdsbesparing</span>
                     </li>
                   </ul>
                 </div>

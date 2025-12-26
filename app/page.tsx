@@ -7,6 +7,7 @@ import WhyChooseUs from './home/why-choose-us';
 import ContactSection from './home/contact-section';
 import Stats from './home/stats';
 import Activiteiten from './home/activiteiten';
+import Voorbeelden from './home/voorbeelden';
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Activiteiten />
       <Stats />
       <WhyChooseUs />
+      <Voorbeelden />
       <ContactSection />
       <Footer />
     </>
