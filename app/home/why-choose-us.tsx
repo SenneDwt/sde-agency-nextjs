@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            Waarom voor ons kiezen
+            Waarom SDE AGENCY?
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Waarom bedrijven met ons werken

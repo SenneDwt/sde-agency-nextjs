@@ -97,7 +97,7 @@ export default function AboutUs() {
                 className="w-full rounded-2xl shadow-2xl border-2 border-white/10 object-cover"
               />
             </div>
-            <div className="flex-1 space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+            <div className="flex-1 space-y-4 text-base sm:text-lg md:text-xl text-slate-200 mb-8 md:mb-12 max-w-3xl leading-relaxed mx-auto px-2">
             <p>
             Hey daar! <br /><br />Ik ben Senne, eigenaar van SDE. Ik help ambitieuze ondernemers met moderne websites en strategische Meta Ads campagnes die écht conversies opleveren. <br /><br />
             Ik ben gepassioneerd over online marketing en webdevelopment. Bij SDE draait alles om één ding: <span className="text-orange-400 font-semibold">resultaat</span>. <br /><br />Ik bouw geen websites om mooi te zijn (hoewel dat zeker meezit), maar om bezoekers om te zetten in klanten. Mijn Meta Ads campagnes zijn niet gemaakt om likes te verzamelen, maar om jouw doelgroep te bereiken en te converteren.
@@ -123,7 +123,7 @@ export default function AboutUs() {
                 <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <value.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{value.title}</h3>
+                <h3 className="text-3xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                   {value.description}
                 </p>
@@ -142,11 +142,11 @@ export default function AboutUs() {
           <div className="space-y-6 sm:space-y-8">
             {steps.map((step, index) => (
               <div key={index} className="flex gap-4 sm:gap-6">
-                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center font-bold text-white text-lg sm:text-xl">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center font-bold text-white text-lg sm:text-lg">
                   {step.number}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{step.title}</h3>
+                  <h3 className="text-3xl font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                     {step.description}
                   </p>

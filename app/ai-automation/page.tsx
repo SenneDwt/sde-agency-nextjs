@@ -53,12 +53,7 @@ export default function AIAutomations() {
       description: 'Automatiseer data-invoer, factuurverwerking, e-mail follow-ups en andere repetitieve taken.',
       results: ['1 werkdag per week bespaard', 'Minder fouten', 'Focus op belangrijke werk']
     },
-    {
-      icon: Database,
-      title: 'Slimme Data-verwerking',
-      description: 'AI die automatisch data verzamelt, categoriseert en rapportages genereert.',
-      results: ['Real-time inzichten', 'Betere beslissingen', 'Geen handmatig werk']
-    },
+  
     {
       icon: TrendingUp,
       title: 'Lead Generatie & Kwalificatie',
@@ -104,8 +99,7 @@ export default function AIAutomations() {
     'Bespaar één werkdag per week op repetitieve taken',
     'Verhoog de productiviteit van je team',
     'Betere klanttevredenheid door snellere response',
-    'Schaalbaar zonder extra personeel',
-    'Data-gedreven beslissingen met AI-inzichten'
+    'Schaalbaar zonder extra personeel'
   ];
 
   const nextSlide = () => {
@@ -224,7 +218,7 @@ export default function AIAutomations() {
                 {[
                   'Neemt repetitief werk volledig uit handen.',
                   'Verbeter klantenservice met 24/7 beschikbare AI assistenten',
-                  'Schaal je bedrijf zonder proportioneel meer personeel'
+                  'Schaal je bedrijf zonder extra personeel'
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
@@ -264,10 +258,10 @@ export default function AIAutomations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Onze AI-oplossingen
+               AI-oplossingen
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Van chatbots tot <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-600">data-analyse</span>
+              Onze <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-600">AI diensten</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Maatwerk AI-oplossingen voor elk bedrijfsproces
@@ -479,7 +473,7 @@ export default function AIAutomations() {
             </div>
 
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-2xl text-white">
-              <h3 className="text-2xl font-bold mb-4">Gratis AI-Scan</h3>
+              <h3 className="text-2xl font-bold mb-4">Gratis AI scan</h3>
               <p className="text-slate-300 mb-6">
                 Benieuwd welke processen in jouw bedrijf geautomatiseerd kunnen worden? Ik doe een gratis analyse en laat je zien waar AI impact kan maken.
               </p>
@@ -487,7 +481,7 @@ export default function AIAutomations() {
                 href="/contact"
                 className="inline-block bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-purple-500/50 transition-all"
               >
-                Vraag de AI-Scan aan
+                Vraag de AI scan aan
               </Link>
             </div>
           </div>

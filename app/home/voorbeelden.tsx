@@ -50,10 +50,10 @@ export default function BeforeAfterSlider() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            Resultaten
+            Mijn werk
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Bewezen <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">resultaten</span>
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">Voorbeelden</span> van mijn werk
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Van concept tot conversie
@@ -67,7 +67,7 @@ export default function BeforeAfterSlider() {
             <div className="p-6 sm:p-8 border-b border-slate-200">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Bouw Advertentie</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Bouw advertentie</h3>
                   <p className="text-slate-600">Advertentie in de bouwsector voor een meta campagne</p>
                 </div>
                 <div className="flex gap-2">
@@ -201,18 +201,11 @@ export default function BeforeAfterSlider() {
           </div>
         </div>
 
-        <div className="p-8">
-      <div className="mt-10 text-center">
-        <div className="flex items-center justify-center gap-3 text-slate-600 mb-6">
-          <ChevronLeft className="w-5 h-5 animate-pulse" />
-          <span className="text-lg font-medium">	Veeg voor verschil</span>
-          <ChevronRight className="w-5 h-5 animate-pulse" />
+        <div className="mt-8 text-center">
+          <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all hover:scale-105">
+            Start jouw project
+          </button>
         </div>
-        <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all hover:scale-105">
-          Start jouw project
-        </button>
-      </div>
-    </div>
       </div>
     </section>
   );

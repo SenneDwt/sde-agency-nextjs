@@ -19,6 +19,18 @@ export default function WebsiteDevelopment() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const nextSlide = () => {
+    if (currentSlide < features.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+  };
+
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -28,25 +40,17 @@ export default function WebsiteDevelopment() {
   };
 
   const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
-
-    if (isLeftSwipe && currentSlide < features.length - 1) {
-      setCurrentSlide(currentSlide + 1);
+    if (!touchEnd) return;
+    
+    if (touchStart - touchEnd > 75) {
+      nextSlide();
     }
-    if (isRightSwipe && currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
+    if (touchStart - touchEnd < -75) {
+      prevSlide();
     }
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(Math.max(0, currentSlide - 1));
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide(Math.min(features.length - 1, currentSlide + 1));
+    
+    setTouchStart(0);
+    setTouchEnd(0);
   };
 
   const features = [
@@ -101,8 +105,8 @@ export default function WebsiteDevelopment() {
     'Optimale snelheid en prestaties',
     'Geen overbodige code of functionaliteit',
     'Betere Google rankings',
-    
   ];
+
   return (
     <>
     <Header />
@@ -175,28 +179,26 @@ export default function WebsiteDevelopment() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Wat We Bouwen
+              Bouwen
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Websites die <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">indruk</span> maken
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              
               Snel, makkelijk en op maat gemaakt.
             </p>
           </div>
 
           {/* Mobile Slider */}
-          <div className="md:hidden">
+          <div className="md:hidden relative">
             <div 
-              className="relative"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
               <div className="overflow-hidden">
                 <div 
-                  className="flex transition-transform duration-300 ease-out"
+                  className="flex transition-transform duration-300 ease-in-out"
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                   {features.map((feature, index) => (
@@ -204,15 +206,13 @@ export default function WebsiteDevelopment() {
                       key={index}
                       className="w-full flex-shrink-0 px-2"
                     >
-                      <div className="p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
+                      <div className="p-8 bg-white rounded-2xl shadow-sm border border-slate-100 h-full">
                         <div className={`w-14 h-14 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
                           <feature.icon className="w-7 h-7 text-white" />
                         </div>
-
                         <h3 className="text-2xl font-bold text-slate-900 mb-3">
                           {feature.title}
                         </h3>
-
                         <p className="text-slate-600 leading-relaxed">
                           {feature.description}
                         </p>
@@ -222,41 +222,34 @@ export default function WebsiteDevelopment() {
                 </div>
               </div>
 
+              {/* Navigation Buttons */}
               <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  prevSlide();
-                }}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors"
-                aria-label="Previous"
+                onClick={prevSlide}
+                disabled={currentSlide === 0}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-6 h-6 text-slate-900" />
               </button>
               <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  nextSlide();
-                }}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors"
-                aria-label="Next"
+                onClick={nextSlide}
+                disabled={currentSlide === features.length - 1}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-6 h-6 text-slate-900" />
               </button>
-            </div>
 
-            <div className="flex justify-center gap-2 mt-6">
-              {features.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    currentSlide === index ? 'bg-orange-500' : 'bg-slate-300'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+              {/* Dots Indicator */}
+              <div className="flex justify-center gap-2 mt-6">
+                {features.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      currentSlide === index ? 'bg-orange-500 w-8' : 'bg-slate-300'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
@@ -344,8 +337,6 @@ export default function WebsiteDevelopment() {
       </div>
     </section>
 
-      
-
       {/* Interactive Performance Dashboard */}
       <section className="py-24 bg-[#F2F2F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -429,7 +420,7 @@ export default function WebsiteDevelopment() {
             Klaar om te starten?
           </h2>
           <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-           Samen bouwen aan jouw ideale website. <br />Plan geheel vrijblijvend een gesprek.
+          Plan geheel vrijblijvend een gesprek.
           </p>
            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-20">
                           <Link href="/contact"
@@ -446,4 +437,3 @@ export default function WebsiteDevelopment() {
     </>
   );
 }
-

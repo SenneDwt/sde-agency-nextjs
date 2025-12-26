@@ -8,7 +8,7 @@ export default function ServicesSection() {
         {/* Centered Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            Onze Diensten
+            Onze diensten
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">

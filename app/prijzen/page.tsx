@@ -137,7 +137,6 @@ export default function Pricing() {
     { name: 'SEO uitbreiding', price: '€200' },
     { name: 'Website onderhoud', price: '€10/maand' },
     { name: 'Hosting', price: '€15/maand' },
-    { name: 'Extra pagina\'s', price: 'Op aanvraag' },
     { name: 'Custom toevoegingen', price: 'Op aanvraag' }
   ];
 

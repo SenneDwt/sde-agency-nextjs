@@ -71,7 +71,6 @@ export default function SocialMediaAds() {
     'Direct contact met mij als jouw specialist',
     'Transparante rapportages elke week',
     'Focus op échte resultaten voor jouw bedrijf',
-    'Persoonlijke strategie',
     'Continue optimalisatie voor betere prestaties'
   ];
 
