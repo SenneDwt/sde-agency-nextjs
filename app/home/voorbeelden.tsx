@@ -1,176 +1,218 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
-import { ArrowRight, Sparkles, Camera, Wand2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-export default function ProductShowcaseSection() {
-  const [sliderPosition, setSliderPosition] = useState(50);
-  const [isDragging, setIsDragging] = useState(false);
+export default function BeforeAfterSlider() {
+  const [slider1Position, setSlider1Position] = useState(50);
+  const [slider2Position, setSlider2Position] = useState(50);
+  const [isDragging1, setIsDragging1] = useState(false);
+  const [isDragging2, setIsDragging2] = useState(false);
 
-  const handleMouseDown = () => setIsDragging(true);
-  const handleMouseUp = () => setIsDragging(false);
-  
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-  if (!isDragging) return;
-  const rect = e.currentTarget.getBoundingClientRect();
-  const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
-  const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
-  setSliderPosition(percent);
-};
+  const handleMove = (
+    clientX: number, 
+    rect: DOMRect, 
+    setPosition: (pos: number) => void
+  ) => {
+    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+    const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
+    setPosition(percent);
+  };
 
-const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-  const rect = e.currentTarget.getBoundingClientRect();
-  const touch = e.touches[0];
-  const x = Math.max(0, Math.min(touch.clientX - rect.left, rect.width));
-  const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
-  setSliderPosition(percent);
-};
+  // Slider 1 handlers
+  const handleMouseMove1 = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging1) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    handleMove(e.clientX, rect, setSlider1Position);
+  };
+
+  const handleTouchMove1 = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!e.touches[0]) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    handleMove(e.touches[0].clientX, rect, setSlider1Position);
+  };
+
+  // Slider 2 handlers
+  const handleMouseMove2 = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging2) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    handleMove(e.clientX, rect, setSlider2Position);
+  };
+
+  const handleTouchMove2 = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!e.touches[0]) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    handleMove(e.touches[0].clientX, rect, setSlider2Position);
+  };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-[#F2F2F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            Voorbeelden
+          <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            Resultaten
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Van product naar{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">
-              wow-factor
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            Bewezen <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-cyan-600">resultaten</span>
           </h2>
-          
-          <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Zie hoe wij jouw productfoto's transformeren in advertenties die écht opvallen
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            Van concept tot conversie
           </p>
         </div>
 
-        {/* Before/After Slider */}
-        <div className="max-w-5xl mx-auto mb-12">
-          <div className="relative group">
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-cyan-500/10 rounded-3xl blur-3xl"></div>
-            
-            <div className="relative bg-slate-900 rounded-3xl overflow-hidden shadow-2xl">
-              {/* Comparison Container */}
-              <div 
-                className="relative w-full aspect-[4/3] md:aspect-[16/9] select-none cursor-ew-resize touch-none"
-                onMouseDown={handleMouseDown}
-                onMouseUp={handleMouseUp}
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseUp}
-                onTouchStart={(e) => {
-                  setIsDragging(true);
-                  handleTouchMove(e);
-                }}
-                onTouchEnd={() => setIsDragging(false)}
-                onTouchMove={handleTouchMove}
-              >
-                {/* After Image (Background) - NA versie */}
-                <div className="absolute inset-0">
-                  <Image 
-                    src="/Nikeafter.jpg"
-                    alt="Nike product advertentie na bewerking"
-                    fill
-                    // Horizontale positie aanpassen: verander left/right percentage (bijv. left_20% = naar rechts, right_20% = naar links)
-                    // Verticale positie aanpassen: verander het percentage (bijv. 20% = omhoog, 50% = center, 80% = omlaag)
-                    className="object-cover object-[left_10%_top_20%]"
-                    priority
-                  />
-                 
-                  {/* After Label - alleen zichtbaar als slider naar rechts gaat */}
-                  <div 
-                    className="absolute top-4 right-4 md:top-6 md:right-6 bg-gradient-to-r from-orange-500 to-cyan-600 px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center gap-2 z-10 transition-opacity duration-200"
-                    style={{ opacity: sliderPosition < 95 ? 1 : 0 }}
-                  >
-                    <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-white" />
-                    <span className="text-white font-semibold text-xs md:text-sm">Na</span>
-                  </div>
+        {/* Projects Grid */}
+        <div className="space-y-12">
+          {/* Construction Project */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
+            <div className="p-6 sm:p-8 border-b border-slate-200">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Bouw Advertentie</h3>
+                  <p className="text-slate-600">Advertentie in de bouwsector voor een meta campagne</p>
                 </div>
-
-                {/* Before Image (Foreground with clip) - VOOR versie */}
-                <div 
-                  className="absolute inset-0"
-                  style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
-                >
-                  <Image 
-                    src="/Nikebefore.jpg"
-                    alt="Nike product foto voor bewerking"
-                    fill
-                    // Verticale positie aanpassen: verander het percentage (bijv. 20% = omhoog, 50% = center, 80% = omlaag)
-                    className="object-cover object-[center_65%]"
-                    priority
-                  />
-                  
-                  {/* Before Label */}
-                  <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-slate-800/90 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full flex items-center gap-2 z-10">
-                    <Camera className="w-3 h-3 md:w-4 md:h-4 text-slate-400" />
-                    <span className="text-white font-semibold text-xs md:text-sm">Voor</span>
-                  </div>
-                </div>
-
-                {/* Slider Handle */}
-                <div 
-                  className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-20"
-                  style={{ left: `${sliderPosition}%` }}
-                >
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <div className="flex gap-1">
-                      <div className="w-0.5 h-3 md:h-4 bg-slate-400 rounded-full"></div>
-                      <div className="w-0.5 h-3 md:h-4 bg-slate-400 rounded-full"></div>
-                    </div>
-                  </div>
+                <div className="flex gap-2">
+                  <span className="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold">
+                    Bouw
+                  </span>
+                  <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+                    Voltooid
+                  </span>
                 </div>
               </div>
             </div>
+            
+            <div
+              className="relative w-full aspect-[4/3] cursor-col-resize select-none bg-slate-100"
+              onMouseDown={() => setIsDragging1(true)}
+              onMouseUp={() => setIsDragging1(false)}
+              onMouseMove={handleMouseMove1}
+              onMouseLeave={() => setIsDragging1(false)}
+              onTouchStart={() => setIsDragging1(true)}
+              onTouchEnd={() => setIsDragging1(false)}
+              onTouchMove={handleTouchMove1}
+            >
+              {/* After Image (base layer - left side) */}
+              <div className="absolute inset-0">
+                <img 
+                  src="/Bouwafter.jpg" 
+                  alt="Na bouw"
+                  className="w-full h-full object-contain pointer-events-none"
+                  draggable="false"
+                />
+              </div>
 
-            {/* Instruction - buiten de slider container */}
-            <div className="mt-6 text-center">
-              <p className="text-slate-600 text-sm md:text-base font-medium">← Sleep om te vergelijken →</p>
+              {/* Before Image (revealed by slider - right side) */}
+              <div
+                className="absolute inset-0"
+                style={{ clipPath: `inset(0 ${100 - slider1Position}% 0 0)` }}
+              >
+                <img 
+                  src="/Bouwbefore.jpg" 
+                  alt="Voor bouw"
+                  className="w-full h-full object-contain pointer-events-none"
+                  draggable="false"
+                />
+              </div>
+
+              {/* Slider Line & Handle */}
+              <div
+                className="absolute top-0 bottom-0 w-1 bg-white shadow-2xl z-10 pointer-events-none"
+                style={{ left: `${slider1Position}%` }}
+              >
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-orange-500 pointer-events-auto cursor-col-resize">
+                  <div className="flex gap-1">
+                    <div className="w-0.5 h-5 bg-slate-700"></div>
+                    <div className="w-0.5 h-5 bg-slate-700"></div>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+
+          {/* Nike Project */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300">
+            <div className="p-6 sm:p-8 border-b border-slate-200">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Voorbeeld productfoto (Nike)</h3>
+                  <p className="text-slate-600">Demostratie voor social media content of advertenties</p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="px-4 py-2 bg-slate-100 text-slate-900 rounded-full text-sm font-semibold">
+                    Retail
+                  </span>
+                  <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+                    Voltooid
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div
+              className="relative w-full aspect-[4/3] cursor-col-resize select-none bg-slate-100"
+              onMouseDown={() => setIsDragging2(true)}
+              onMouseUp={() => setIsDragging2(false)}
+              onMouseMove={handleMouseMove2}
+              onMouseLeave={() => setIsDragging2(false)}
+              onTouchStart={() => setIsDragging2(true)}
+              onTouchEnd={() => setIsDragging2(false)}
+              onTouchMove={handleTouchMove2}
+            >
+              {/* After Image (base layer - left side) */}
+              <div className="absolute inset-0">
+                <img 
+                  src="/Nikeafter.jpg" 
+                  alt="Na Nike"
+                  className="w-full h-full object-contain pointer-events-none"
+                  draggable="false"
+                />
+              </div>
+
+              {/* Before Image (revealed by slider - right side) */}
+              <div
+                className="absolute inset-0"
+                style={{ clipPath: `inset(0 ${100 - slider2Position}% 0 0)` }}
+              >
+                <img 
+                  src="/Nikebefore.jpg" 
+                  alt="Voor Nike"
+                  className="w-full h-full object-contain pointer-events-none"
+                  draggable="false"
+                />
+              </div>
+
+              {/* Slider Line & Handle */}
+              <div
+                className="absolute top-0 bottom-0 w-1 bg-white shadow-2xl z-10 pointer-events-none"
+                style={{ left: `${slider2Position}%` }}
+              >
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-slate-900 pointer-events-auto cursor-col-resize">
+                  <div className="flex gap-1">
+                    <div className="w-0.5 h-5 bg-slate-700"></div>
+                    <div className="w-0.5 h-5 bg-slate-700"></div>
+                  </div>
+                </div>
+              </div>
+
+              
             </div>
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-[#F2F2F2] rounded-2xl p-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
-              <Camera className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">Professionele Bewerking</h3>
-            <p className="text-slate-600">Van simpele productfoto naar eye-catching advertentie</p>
-          </div>
-
-          <div className="bg-[#F2F2F2] rounded-2xl p-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
-              <Wand2 className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">Creatieve Concepten</h3>
-            <p className="text-slate-600">Unieke visuele stijlen die jouw merk laten opvallen</p>
-          </div>
-
-          <div className="bg-[#F2F2F2] rounded-2xl p-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">Hogere Conversie</h3>
-            <p className="text-slate-600">Advertenties die stoppen, boeien en converteren</p>
-          </div>
+        <div className="p-8">
+      <div className="mt-10 text-center">
+        <div className="flex items-center justify-center gap-3 text-slate-600 mb-6">
+          <ChevronLeft className="w-5 h-5 animate-pulse" />
+          <span className="text-lg font-medium">	Veeg voor verschil</span>
+          <ChevronRight className="w-5 h-5 animate-pulse" />
         </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          <a 
-            href="/meta-advertenties"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105 group"
-          >
-            <span>Ontdek wat we voor jou kunnen doen</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
+        <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all hover:scale-105">
+          Start jouw project
+        </button>
+      </div>
+    </div>
       </div>
     </section>
   );

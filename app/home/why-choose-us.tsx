@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <section id="waarom" className="py-24 bg-[#F2F2F2]">
+    <section id="waarom" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -98,17 +98,17 @@ export default function WhyChooseUs() {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="group p-8 bg-slate-50 rounded-2xl border border-slate-200 hover:border-orange-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-orange-200 hover:-translate-y-1"
             >
-              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <reason.icon className={`w-7 h-7 ${reason.color}`} />
+              <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <reason.icon className="w-7 h-7 text-white" />
               </div>
 
               <h3 className="text-2xl font-bold text-slate-900 mb-3">
                 {reason.title}
               </h3>
 
-              <p className="text-slate-600 text-lg leading-relaxed">
+              <p className="text-slate-600 leading-relaxed">
                 {reason.description}
               </p>
             </div>
@@ -116,16 +116,15 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Mobile Slider - Visible only on mobile */}
-        <div className="md:hidden">
+        <div className="md:hidden relative">
           <div 
-            className="relative"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
             <div className="overflow-hidden">
               <div 
-                className="flex transition-transform duration-300 ease-out"
+                className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {reasons.map((reason, index) => (
@@ -133,9 +132,9 @@ export default function WhyChooseUs() {
                     key={index}
                     className="w-full flex-shrink-0 px-2"
                   >
-                    <div className="p-8 bg-slate-50 rounded-2xl border border-slate-200">
-                      <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6">
-                        <reason.icon className={`w-7 h-7 ${reason.color}`} />
+                    <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full">
+                      <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <reason.icon className="w-7 h-7 text-white" />
                       </div>
 
                       <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -151,43 +150,34 @@ export default function WhyChooseUs() {
               </div>
             </div>
 
+            {/* Navigation Buttons */}
             <button
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                prevSlide();
-              }}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors"
-              aria-label="Previous"
+              onClick={prevSlide}
+              disabled={currentSlide === 0}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-6 h-6 text-slate-900" />
             </button>
             <button
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                nextSlide();
-              }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors"
-              aria-label="Next"
+              onClick={nextSlide}
+              disabled={currentSlide === reasons.length - 1}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-6 h-6 text-slate-900" />
             </button>
-          </div>
 
-          <div className="flex justify-center gap-2 mt-6">
-            {reasons.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentSlide 
-                    ? 'bg-orange-500 w-6' 
-                    : 'bg-slate-300 w-2'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+            {/* Dots Indicator */}
+            <div className="flex justify-center gap-2 mt-6">
+              {reasons.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    currentSlide === index ? 'bg-orange-500 w-8' : 'bg-slate-300'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

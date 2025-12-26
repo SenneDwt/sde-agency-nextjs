@@ -17,9 +17,9 @@ export default function Home() {
       {/* Home page sections in order */}
       <Hero />
       <Activiteiten />
-      <Stats />
-      <WhyChooseUs />
       <Voorbeelden />
+      <WhyChooseUs />
+      <Stats />
       <ContactSection />
       <Footer />
     </>

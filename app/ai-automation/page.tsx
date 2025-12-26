@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Bot, Zap, Clock, TrendingUp, Users, Sparkles, CheckCircle2, Brain, Workflow, MessageSquare, BarChart3, Database, Shield, Cpu, GitBranch } from 'lucide-react';
+import { ArrowRight, Bot, Zap, Clock, TrendingUp, Users, Sparkles, CheckCircle2, Brain, Workflow, MessageSquare, BarChart3, Database, Shield, Cpu, GitBranch, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '../headerAndFooter/header';
@@ -9,6 +9,9 @@ import Footer from '../headerAndFooter/footer';
 
 export default function AIAutomations() {
   const [scrollY, setScrollY] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -104,6 +107,40 @@ export default function AIAutomations() {
     'Schaalbaar zonder extra personeel',
     'Data-gedreven beslissingen met AI-inzichten'
   ];
+
+  const nextSlide = () => {
+    if (currentSlide < features.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchEnd) return;
+    
+    if (touchStart - touchEnd > 75) {
+      nextSlide();
+    }
+    if (touchStart - touchEnd < -75) {
+      prevSlide();
+    }
+    
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   return (
     <>
@@ -266,7 +303,76 @@ export default function AIAutomations() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* Mobile Slider */}
+          <div className="md:hidden relative">
+            <div 
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <div className="overflow-hidden">
+                <div 
+                  className="flex transition-transform duration-300 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {useCases.map((useCase, index) => (
+                    <div 
+                      key={index}
+                      className="w-full flex-shrink-0 px-2"
+                    >
+                      <div className="bg-[#F2F2F2] p-8 rounded-2xl border border-slate-200 h-full">
+                        <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                          <useCase.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-3">{useCase.title}</h3>
+                        <p className="text-slate-600 leading-relaxed mb-6">{useCase.description}</p>
+                        <div className="space-y-2">
+                          {useCase.results.map((result, i) => (
+                            <div key={i} className="flex items-center gap-2">
+                              <CheckCircle2 className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                              <span className="text-slate-700 font-medium">{result}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Navigation Buttons */}
+              <button
+                onClick={prevSlide}
+                disabled={currentSlide === 0}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft className="w-6 h-6 text-slate-900" />
+              </button>
+              <button
+                onClick={nextSlide}
+                disabled={currentSlide === useCases.length - 1}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronRight className="w-6 h-6 text-slate-900" />
+              </button>
+
+              {/* Dots Indicator */}
+              <div className="flex justify-center gap-2 mt-6">
+                {useCases.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      currentSlide === index ? 'bg-purple-500 w-8' : 'bg-slate-300'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div 
                 key={index}
@@ -388,34 +494,9 @@ export default function AIAutomations() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-[#F2F2F2] from-slate-900 via-slate-800 to-slate-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <Bot className="w-12 h-12 text-purple-400 animate-pulse" />
-            <Sparkles className="w-12 h-12 text-cyan-400" />
-            <Brain className="w-12 h-12 text-purple-400 animate-pulse" style={{ animationDelay: '0.5s' }} />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Klaar voor AI?
-          </h2>
-          <p className="text-slate-600 text-xl leading-relaxed mb-10">
-            Plan een vrijblijvend gesprek en ontdek hoe AI jouw bedrijf kan transformeren. <br />Inclusief gratis analyse van automatiseringskansen.
-          </p>
-          <Link 
-            href="/contact"
-            className="group inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white px-12 py-6 rounded-full font-semibold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
-          >
-            Start je AI-project
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-      </section>
+    
     </div>
     <Footer />
     </>
   );
 }
-
-// Import statement voor Search icon die ontbreekt
-import { Search } from 'lucide-react';
