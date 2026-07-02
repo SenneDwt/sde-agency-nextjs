@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { Link } from "../../../i18n/navigation";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-slate-600 hover:text-orange-500 mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-slate-600 hover:text-green-400 mb-8 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Terug naar homepage
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
                 ons{" "}
                 <Link
                   href="/cookiebeleid"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Cookiebeleid
                 </Link>{" "}
@@ -445,7 +445,7 @@ export default function PrivacyPolicyPage() {
               gedetailleerde informatie verwijzen wij u naar ons{" "}
               <Link
                 href="/cookiebeleid"
-                className="text-orange-500 hover:underline"
+                className="text-green-400 hover:underline"
               >
                 Cookiebeleid
               </Link>

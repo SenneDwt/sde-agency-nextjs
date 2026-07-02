@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { Link } from "../../../i18n/navigation";
 
 export default function CookiePolicyPage() {
   return (
@@ -9,7 +9,7 @@ export default function CookiePolicyPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-slate-600 hover:text-orange-500 mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-slate-600 hover:text-green-400 mb-8 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Terug naar homepage
@@ -168,7 +168,7 @@ export default function CookiePolicyPage() {
                       href="https://tools.google.com/dlpage/gaoptout"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-orange-500 hover:underline"
+                      className="text-green-400 hover:underline"
                     >
                       Google Analytics Opt-out
                     </a>
@@ -231,7 +231,7 @@ export default function CookiePolicyPage() {
                       href="https://www.facebook.com/privacy/explanation"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-orange-500 hover:underline"
+                      className="text-green-400 hover:underline"
                     >
                       Privacybeleid van Meta
                     </a>
@@ -254,7 +254,7 @@ export default function CookiePolicyPage() {
                       href="https://policies.google.com/privacy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-orange-500 hover:underline"
+                      className="text-green-400 hover:underline"
                     >
                       Privacybeleid van Google
                     </a>
@@ -276,7 +276,7 @@ export default function CookiePolicyPage() {
                       href="https://www.linkedin.com/legal/privacy-policy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-orange-500 hover:underline"
+                      className="text-green-400 hover:underline"
                     >
                       Privacybeleid van LinkedIn
                     </a>
@@ -324,7 +324,7 @@ export default function CookiePolicyPage() {
                   href="https://www.linkedin.com/legal/cookie-policy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Cookiebeleid van LinkedIn
                 </a>
@@ -334,7 +334,7 @@ export default function CookiePolicyPage() {
                   href="https://help.instagram.com/519522125107875"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Privacybeleid van Instagram
                 </a>
@@ -344,7 +344,7 @@ export default function CookiePolicyPage() {
                   href="https://twitter.com/privacy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Privacybeleid van Twitter
                 </a>
@@ -368,7 +368,7 @@ export default function CookiePolicyPage() {
                   href="https://policies.google.com/privacy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Privacybeleid
                 </a>{" "}
@@ -377,7 +377,7 @@ export default function CookiePolicyPage() {
                   href="https://policies.google.com/technologies/cookies"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Cookiebeleid
                 </a>
@@ -388,7 +388,7 @@ export default function CookiePolicyPage() {
                   href="https://www.facebook.com/privacy/explanation"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Privacybeleid
                 </a>{" "}
@@ -397,7 +397,7 @@ export default function CookiePolicyPage() {
                   href="https://www.facebook.com/policies/cookies"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Cookiebeleid
                 </a>
@@ -437,7 +437,7 @@ export default function CookiePolicyPage() {
                   href="https://support.google.com/chrome/answer/95647"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Instellingen &gt; Privacy en beveiliging &gt; Cookies
                 </a>
@@ -448,7 +448,7 @@ export default function CookiePolicyPage() {
                   href="https://support.mozilla.org/nl/kb/cookies-verwijderen-gegevens-wissen-websites-opgeslagen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Opties &gt; Privacy &amp; Beveiliging &gt; Cookies en
                   websitegegevens
@@ -460,7 +460,7 @@ export default function CookiePolicyPage() {
                   href="https://support.apple.com/nl-nl/guide/safari/sfri11471/mac"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Voorkeuren &gt; Privacy &gt; Cookies en websitegegevens
                 </a>
@@ -471,7 +471,7 @@ export default function CookiePolicyPage() {
                   href="https://support.microsoft.com/nl-nl/microsoft-edge/cookies-verwijderen-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Instellingen &gt; Privacy, zoeken en services &gt; Cookies
                 </a>
@@ -496,7 +496,7 @@ export default function CookiePolicyPage() {
                   href="https://tools.google.com/dlpage/gaoptout"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Opt-out Browser Add-on
                 </a>
@@ -507,7 +507,7 @@ export default function CookiePolicyPage() {
                   href="https://adssettings.google.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Advertentie-instellingen
                 </a>
@@ -518,7 +518,7 @@ export default function CookiePolicyPage() {
                   href="https://www.facebook.com/settings?tab=ads"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Advertentie-instellingen
                 </a>
@@ -529,7 +529,7 @@ export default function CookiePolicyPage() {
                   href="https://www.linkedin.com/psettings/advertising"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Advertentie-instellingen
                 </a>
@@ -617,7 +617,7 @@ export default function CookiePolicyPage() {
                   href="https://www.allesovercookies.nl/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Alles over cookies
                 </a>
@@ -627,7 +627,7 @@ export default function CookiePolicyPage() {
                   href="https://www.autoriteitpersoonsgegevens.nl/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline"
+                  className="text-green-400 hover:underline"
                 >
                   Autoriteit Persoonsgegevens
                 </a>

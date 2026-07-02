@@ -1,12 +1,11 @@
-import Header from './headerAndFooter/header';
-import Footer from './headerAndFooter/footer';
+import Header from '../headerAndFooter/header';
+import Footer from '../headerAndFooter/footer';
 // Import all components from home folder in order
-import Hero from './home/hero';
+import Hero from '../home/hero';
 
-import WhyChooseUs from './home/why-choose-us';
-import ContactSection from './home/contact-section';
-import Activiteiten from './home/activiteiten';
-import Voorbeelden from './home/voorbeelden';
+import Activiteiten from '../home/activiteiten';
+import SocialProof from '../home/social-proof';
+
 
 
 export default function Home() {
@@ -16,10 +15,8 @@ export default function Home() {
       {/* Home page sections in order */}
       <Hero />
       <Activiteiten />
-      <Voorbeelden />
-      <WhyChooseUs />
+      <SocialProof />
 
-      <ContactSection />
       <Footer />
     </>
   );
